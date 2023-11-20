@@ -1,10 +1,6 @@
 Laboratoire: Introdution au Média sur IP
 ----------------------------------------
 
-<style>
-extra { color: Grey }
-</style>
-
 Sponsorisé par:
 
 ![logo](https://site-cbc.radio-canada.ca/site/annual-reports/2014-2015/_images/about/services/cbc-radio-canada.png)
@@ -25,33 +21,34 @@ Ce laboratoire consiste à mettre en application des concepts de réseautique po
 ## Compétences
 
 L’étudiant.e est amené.e à:
-* installer et configurer les équipements d’une chaîne de production afin de produire un contenu 
-* audiovisuel en direct
-* déboguer le chemin du flux de donnée
-* mesurer le trafic à différents points du réseau
-* juger la qualité du résultat en se basant sur son expérience de consommateur de vidéo en ligne
-* identifier les contraintes techniques compromettant cette qualité perceptuelle
-* tester et fixer différents paramètres afin de trouver le meilleur compromis  
+* __installer et configurer__ les équipements d’une chaîne de production afin de produire un contenu 
+* __audiovisuel__ en direct
+* __déboguer__ le chemin du flux de donnée
+* __mesurer__ le trafic à différents points du réseau
+* __juger__ la qualité du résultat en se basant sur son expérience de consommateur de vidéo en ligne
+* __identifier__ les contraintes techniques compromettant cette qualité perceptuelle
+* __tester__ et fixer différents paramètres afin de trouver le meilleur compromis  
 
 ## Connaissances 
 
 Réseaux:
 
 * encapsulation IP: UDP vs TCP, RTP
-* routage couche 2: unicast ou multicast, IGMP, VLAN
-* routage couche 3
-* <extra>protocol de contrôle: web API
+* routage couche 2: unicast ou multicast, IGMP
+* ~~VLAN, QoS~~
+* ~~routage couche 3~~
 
 Média:
 
 * protocole de transport: 2110/mpeg-TS
 * codecs: h264, aac
 * contraintes: qualité du signal, bande passante, délai
-* <extra>Formats média: HD, stéréo…
+* ~~formats média: HD, stéréo…~~
 
 Autres:
 
-* <extra>scripting
+* ~~scripting~~
+* ~~protocol de contrôle: _web API~~_
 
 # Requis techniques
 
@@ -64,9 +61,9 @@ Autres:
 
 # Déroulement
 
-1) installation ne chaîne simple avec une source (caméra), un canal (réseau), une destination (moniteur)
-2) introduction d’un équipement inconnu
-3) ajout d'une autre source et utilisation d’un mixeur
-4) configurer le signal de distribution
+1. installation d'une chaîne de transmission simple avec une source (caméra), un canal (réseau), une destination (moniteur)
+2. insertion d'un équipement inconnu
+3. ajout d'une autre source et utilisation d’un mixeur
+4. configurer le signal de distribution
 
 [C'est parti!](./laboratoire.md)
