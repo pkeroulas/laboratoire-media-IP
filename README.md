@@ -35,20 +35,26 @@ Réseaux:
 
 * encapsulation IP: UDP vs TCP, RTP
 * routage couche 2: unicast ou multicast, IGMP
-* ~~VLAN, QoS~~
-* ~~routage couche 3~~
 
 Média:
 
-* protocole de transport: 2110/mpeg-TS
+* protocole de transport: 2110, mpeg-TS
 * codecs: h264, aac
 * contraintes: qualité du signal, bande passante, délai
-* ~~formats média: HD, stéréo…~~
 
-Autres:
+La section [Idées](#idees) liste une série de concepts additionnels qui pourraient être explorés.
 
-* ~~scripting~~
-* ~~protocol de contrôle: _web API~~_
+# Aperçu
+
+![apercu](./img/laboratoire_media_sur_IP_apercus.png)
+[Source](https://docs.google.com/drawings/d/1q6MF5KY4nLmCBxLiehqOJvOSK_qoAchkg8bCS-ulvEI/edit)
+
+Le laboratoire consite à bâtir une chaîne de traitement média _live_ et d'aboutir à la formation d'un signal distribuable.
+Le point de départ est la captation d'une source audio-video. Ensuite, ce contenu sera modifié par
+l'apport d'autres sources (fichiers, _webcam_ etc.) et l'ajustement de paramètres (niveaux, colorimétrie etc.).
+Ce résultat sera finalement compressé 
+
+Les étapes de réalisation seront semées d'embûches mais suivent une méthodologie rigoureuse avec de la validation systématique.
 
 # Requis techniques
 
@@ -67,3 +73,12 @@ Autres:
 4. configurer le signal de distribution
 
 [C'est parti!](./laboratoire.md)
+
+# <a name="idees"></a> Idées
+
+Un ou plusieurs modules pourrait compléter le laboratoire, notamment:
+
+* le contrôle d'équipements/services à travers un _webAPI_ grâce à des scripts
+* l'optimisations du réseau: VLAN, QoS
+* un exercice peut inclure une partie _Linux Shell_ qui est de plus en plus utilisé dans l'industrie.
+* la distribution du signal de sortie sur une platforme _web_
