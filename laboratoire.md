@@ -3,6 +3,9 @@ Laboratoire: Intro au Média sur IP
 
 # Phase 1: préparer le matériel 
 
+![phase1](./img/laboratoire_media_sur_IP_phase1.png)
+*[Diagramme source](https://docs.google.com/drawings/d/1CZXJb9VgcKqT9M0tsVFD6_huqsBrnm8NyrAL9IfMmnI/edit)*
+
 ## Caméra
 
 * [ A DETAILLER ]
@@ -18,9 +21,12 @@ Laboratoire: Intro au Média sur IP
 * Ouvrir une session sur le PC
 * Ouvrir un terminal (Win & Linux) ou Putty.exe (Win)
 * Se logger sur le commutateur
-    * `ssh switch_user@switch_IP` pass:`switch_pass`
+    * `ssh [SWITCH_USER]@[SWITCH_IP]` pass:`[SWITCH_PASS]`
 
 # Phase 2: Installation d’une chaîne média simple
+
+![phase2](./img/laboratoire_media_sur_IP_phase2.png)
+*[Diagramme source](https://docs.google.com/drawings/d/1q6MF5KY4nLmCBxLiehqOJvOSK_qoAchkg8bCS-ulvEI/edit)*
 
 ## Moniteur
 
@@ -52,6 +58,9 @@ Laboratoire: Intro au Média sur IP
 
 # Phase 3: insertion d’un équipement inconnu
 
+![phase3](./img/laboratoire_media_sur_IP_phase3.png)
+*[Diagramme source](https://docs.google.com/drawings/d/1g69jHkFmMmtmeYx_w6pYkU2EEvJdAaBjWFwXzCenr1w/edit)*
+
 ## PC mixeur
 
 * Brancher le PC mixeur au commutateur Port5
@@ -72,9 +81,12 @@ Laboratoire: Intro au Média sur IP
 ## PC mixeur
 
 * Identifier le processus coupable et le fermer
-    * 💡 `netstat -laputen`
+    * 💡 `netstat -laputen` (Linux)
 
-# Phase 3: Utilisation d’un mixeur
+# Phase 4: Utilisation d’un mixeur
+
+![phase4](./img/laboratoire_media_sur_IP_phase4.png)
+*[Diagramme source](https://docs.google.com/drawings/d/1g69jHkFmMmtmeYx_w6pYkU2EEvJdAaBjWFwXzCenr1w/edit)*
 
 ## PC mixeur
 
@@ -93,3 +105,9 @@ Laboratoire: Intro au Média sur IP
 ## Moniteur
 
 * Ajuster VLC sur cette nouvelle IP:port pour recevoir le résultat 
+
+# Phase 5: Formation du signal de sortie
+
+![phase5](./img/laboratoire_media_sur_IP_phase5.png)
+*[Diagramme source](https://docs.google.com/drawings/d/1q6MF5KY4nLmCBxLiehqOJvOSK_qoAchkg8bCS-ulvEI/edit)*
+

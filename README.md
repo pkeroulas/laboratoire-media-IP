@@ -46,8 +46,8 @@ La section [Idées](#idees) liste une série de concepts additionnels qui pourra
 
 # Aperçu
 
-![apercu](./img/laboratoire_media_sur_IP_apercus.png)
-[Source](https://docs.google.com/drawings/d/1q6MF5KY4nLmCBxLiehqOJvOSK_qoAchkg8bCS-ulvEI/edit)
+![apercu](./img/laboratoire_media_sur_IP_phase5.png)
+*[Diagramme source](https://docs.google.com/drawings/d/1q6MF5KY4nLmCBxLiehqOJvOSK_qoAchkg8bCS-ulvEI/edit)*
 
 Le laboratoire consite à bâtir une chaîne de traitement média _live_ et d'aboutir à la formation d'un signal distribuable.
 Le point de départ est la captation d'une source audio-video. Ensuite, ce contenu sera modifié par
@@ -61,6 +61,7 @@ Les étapes de réalisation seront semées d'embûches mais suivent une méthodo
 * 2 PCs
 * switch Cisco simple
 * une caméra IP
+* système d'exploitation à déterminer
 * logiciels libres: VLC, OBS, etc. Wireshark
 
 [Guide de l'instructeur.](./guide-instructeur.md)
