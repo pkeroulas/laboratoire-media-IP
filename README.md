@@ -7,7 +7,12 @@ Sponsorisé par:
 
 # Contexte
 
-Ce laboratoire consiste à mettre en application des concepts de réseautique pour le transport de contenu audiovisuel et à se familiariser avec des outils logiciels de traitement de ce même contenu. Les concepts abordés s’appliquent à de réelles situations de production média _live_ ainsi qu’aux réseaux de distribution par câble, satellite  ou _web_. Les ressources à moindre coût employées dans cet exercice sont basées sur du matériel aussi générique que possible, sur des logiciels libres et des protocoles de transport/contrôle média standards.
+Ce laboratoire consiste à mettre en application des concepts de réseautique pour le transport de
+contenu audiovisuel et à se familiariser avec des outils logiciels de traitement de ce même contenu.
+Les concepts abordés s’appliquent à de réelles situations de production média _live_ ainsi qu’aux
+réseaux de distribution par câble, satellite  ou _web_. Les ressources à moindre coût employées dans
+cet exercice sont basées sur du matériel aussi générique que possible, sur des logiciels libres et
+des protocoles de transport/contrôle média standards.
 
 # Pré-requis
 
@@ -22,9 +27,12 @@ Ce laboratoire consiste à mettre en application des concepts de réseautique po
 
 ## Compétences
 
-Les étapes de réalisation sont semées d'embûches réalistes. Cependant une méthodologie rigoureuse permet de les surmonter par de la validation systématique. Un autre but de cette démarche est de créer un pont cognitif entre les obervations de données très bas niveau et l'expérience du média temps réel.
-
-Les tâches suivantes visent à développer une méthodologie permettant d'opérer horizontalement (aux differents points du chemin de données) et verticalement (à travers les différentes couches technologiques).
+Le but de l'exercice est de bâtir une chaîne de traitement média _live_ afin d'obtenir un programme,
+c'est-à-dire un flux audiovisuel distribuable. La réalisation de ce produit est semé d'embûches
+réalistes mais la méthodologie rigoureuse employée permet de les surmonter par de la validation
+systématique. Les tâches suivantes visent à développer cette méthodologie permettant d'opérer
+horizontalement (aux differents points du chemin de données) et verticalement (à travers les
+différentes couches technologiques).
 
 * __installer et configurer__ les équipements d’une chaîne de production afin de produire un contenu en direct
 * __déboguer__ le chemin du flux de donnée
@@ -32,6 +40,9 @@ Les tâches suivantes visent à développer une méthodologie permettant d'opér
 * __juger__ la qualité du résultat
 * __identifier__ les contraintes techniques compromettant cette qualité perceptuelle
 * __tester__ et fixer différents paramètres afin de trouver le meilleur compromis  
+
+Un autre but de cette démarche est de créer un pont cognitif entre l'osbervation de
+données très bas niveau et l'expérience du média temps réel.
 
 ## Connaissances 
 
@@ -53,27 +64,28 @@ La section [Idées](#idees) liste une série de concepts additionnels qui pourra
 ![apercu](./img/laboratoire_media_sur_IP_phase5.png)
 *[Diagramme source](https://docs.google.com/drawings/d/1q6MF5KY4nLmCBxLiehqOJvOSK_qoAchkg8bCS-ulvEI/edit)*
 
-Le but de l'exercice est à bâtir une chaîne de traitement média _live_ afin d'obtenir un flux audiovisuel distribuable.
-Le point de départ est une caméra qui fournit le signal source qu'il faut véhiculer sur un réseau IP. Puis un mixeur
-permettra d'insérer autres éléments graphiques ou sonnores (fichiers, _webcam_ etc.) et l'ajustement de paramètres (colorimétrie,
-volume sonore, etc.). Ce résultat sera finalement compressé et converti dans un format adapté au transport sur Internet.
+Le point de départ est une caméra qui fournit le
+signal source qu'il faut véhiculer sur un réseau IP. Puis un mixeur permettra d'insérer d'autres
+éléments graphiques ou sonnores (fichiers, _webcam_ etc.) et permettra aussi d'ajuster certains
+paramètres (colorimétrie, volume sonore, etc.). Ce résultat sera finalement compressé et converti
+dans un format adapté au transport sur Internet.
 
 # Requis techniques
 
 * 2 PCs
-* switch Cisco simple
+* commutateur Cisco simple
 * une caméra IP
 * logiciels libres: VLC, OBS, etc. Wireshark
 
-[Guide de l'instructeur.](./guide-instructeur.md)
+[Guide de l'instructeur.](./guide-instructeur.md)🤓
 
 # Déroulement
 
-1. préparation du matériel: d'une chaîne de transmission simple avec une source (caméra), un canal (réseau), une destination (moniteur)
-2. configuration c d’une chaîne média simple
+1. préparation et branchement du matériel: une source (caméra) + un canal (réseau) + une destination (moniteur)
+2. configuration d’une chaîne média simple
 3. insertion d'un équipement inconnu
 4. utilisation d’un mixeur et ajout de nouvelles sources 
-5. configuration du flux de sortie
+5. formatage du flux de sortie
 
 [C'est parti!](./laboratoire.md)🚀
 
@@ -81,7 +93,7 @@ volume sonore, etc.). Ce résultat sera finalement compressé et converti dans u
 
 Un ou plusieurs modules pourraient compléter le laboratoire, notamment:
 
-* _scripting_ + HTTP: le contrôle d'équipements/services à travers un _webAPI_
+* _scripting_ + HTTP: le contrôle et/ou surveillance d'équipements et de services à travers un _webAPI_
 * réseau: optimisations avec VLAN, QoS
 * administration système: une partie _Linux Shell_ qui est de plus en plus utilisé dans l'industrie
 * infonuagique: la distribution du signal de sortie sur une platforme en ligne
