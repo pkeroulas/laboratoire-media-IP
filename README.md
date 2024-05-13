@@ -95,5 +95,8 @@ Un ou plusieurs modules pourraient compléter le laboratoire, notamment:
 
 * _scripting_ + HTTP: le contrôle et/ou surveillance d'équipements et de services à travers un _webAPI_
 * réseau: optimisations avec VLAN, QoS
-* administration système: une partie _Linux Shell_ qui est de plus en plus utilisé dans l'industrie
+* administration système: une partie _Linux Shell_ qui est de plus en plus utilisé dans l'industrie. L'encodeur pour être implanter dans une machine sans UI (ffmpeg).
 * infonuagique: la distribution du signal de sortie sur une platforme en ligne
+* _routage_ couche 3 pour les multicasts
+* gestion de jitter/buffer avec un simulateur de réseau
+* couche de contrôle avec NMOS
