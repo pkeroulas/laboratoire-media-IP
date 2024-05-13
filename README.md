@@ -39,25 +39,38 @@ différentes couches technologiques).
 * __mesurer__ le trafic à différents points du réseau
 * __juger__ la qualité du résultat
 * __identifier__ les contraintes techniques compromettant cette qualité perceptuelle
-* __tester__ et fixer différents paramètres afin de trouver le meilleur compromis  
+* __tester__ et fixer différents paramètres afin de trouver le meilleur compromis
 
 Un autre but de cette démarche est de créer un pont cognitif entre l'osbervation de
 données très bas niveau et l'expérience du média temps réel.
 
-## Connaissances 
+## Connaissances
+
+Chacun des 3 thèmes suivant sera abordé. Ces listes exhaustives ne
+pourront être entièrement couvertes mais sont ordonnées par priorités.
 
 Réseaux:
 
-* __encapsulation__ IP: UDP vs TCP, RTP
-* __routage__ couche 2: unicast ou multicast, IGMP
+* __routage__ L2: multicast, IGMP
+* __transport__: UDP vs TCP, RTP
+* __delai/jitter__ absorbé par buffer et __optimisation__ par QoS (comment induire du délai?)
+* __routage__ L3
 
 Média:
 
-* __protocoles__ de transport: 2110, mpeg-TS
+* __protocoles__ de transport: retrouver les données média dans les paquets IP
+* __formats__ audio, vidéo, meta-données
+* __contraintes__: trouver l'équilibre entre qualité du signal, bande passante et délai
 * __codecs__: h264, aac
-* __contraintes__: qualité du signal, bande passante, délai
+* __luma__ vs __chroma__
+* __echantillonnage__
 
-La section [Idées](#idees) liste une série de concepts additionnels qui pourraient être explorés.
+IT:
+
+* __Linux Shell__: configurer un système (comme un encodeur vidéo) _headless_ par ssh
+* __scripting__: contrôler et/ou surveiller un équipement ou service à travers un _web API_
+* __couche de contrôle__ des signaux avec [NMOS](https://specs.amwa.tv/nmos/)
+* __infonuagique__: distribution du signal de sortie sur une platforme en ligne
 
 # Aperçu
 
@@ -88,15 +101,3 @@ dans un format adapté au transport sur Internet.
 5. formatage du flux de sortie
 
 [C'est parti!](./laboratoire.md)🚀
-
-# <a name="idees"></a> Idées
-
-Un ou plusieurs modules pourraient compléter le laboratoire, notamment:
-
-* _scripting_ + HTTP: le contrôle et/ou surveillance d'équipements et de services à travers un _webAPI_
-* réseau: optimisations avec VLAN, QoS
-* administration système: une partie _Linux Shell_ qui est de plus en plus utilisé dans l'industrie. L'encodeur pour être implanter dans une machine sans UI (ffmpeg).
-* infonuagique: la distribution du signal de sortie sur une platforme en ligne
-* _routage_ couche 3 pour les multicasts
-* gestion de jitter/buffer avec un simulateur de réseau
-* couche de contrôle avec NMOS
