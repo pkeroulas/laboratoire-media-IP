@@ -16,12 +16,11 @@ des protocoles de transport/contrôle média standards.
 
 # Pré-requis
 
-* modèle OSI
-* concept de routage, couches 2 et 3
-* expérience avec Wireshark
-* expérience avec en configuration de commutateur/routeur
-* (terminal Linux)
-* (base de Python)
+* Modèle OSI
+* Concept de routage, couches 2 et 3
+* Expérience avec Wireshark
+* Expérience avec en configuration de commutateur/routeur
+* Base Linux et Python
 
 # Objectifs d’apprentissage
 
@@ -34,12 +33,12 @@ systématique. Les tâches suivantes visent à développer cette méthodologie p
 horizontalement (aux differents points du chemin de données) et verticalement (à travers les
 différentes couches technologiques).
 
-* __installer et configurer__ les équipements d’une chaîne de production afin de produire un contenu en direct
-* __déboguer__ le chemin du flux de donnée
-* __mesurer__ le trafic à différents points du réseau
-* __juger__ la qualité du résultat
-* __identifier__ les contraintes techniques compromettant cette qualité perceptuelle
-* __tester__ et fixer différents paramètres afin de trouver le meilleur compromis
+* __Installer et configurer__ les équipements d’une chaîne de production afin de produire un contenu en direct
+* __Déboguer__ le chemin du flux de donnée
+* __Mesurer__ le trafic à différents points du réseau
+* __Juger__ la qualité du résultat
+* __Identifier__ les contraintes techniques compromettant cette qualité perceptuelle
+* __Tester__ et fixer différents paramètres afin de trouver le meilleur compromis
 
 Un autre but de cette démarche est de créer un pont cognitif entre l'osbervation de
 données très bas niveau et l'expérience du média temps réel.
@@ -51,26 +50,32 @@ pourront être entièrement couvertes mais sont ordonnées par priorités.
 
 Réseaux:
 
-* __routage__ L2: multicast, IGMP
-* __transport__: UDP vs TCP, RTP
-* __delai/jitter__ absorbé par buffer et __optimisation__ par QoS (comment induire du délai?)
-* __routage__ L3
+* __Routage__ L2: multicast, IGMP
+* __Transport__: UDP vs TCP, TTL, RTP
+* __Delai/jitter__ absorbé par buffer et __optimisation__ par QoS (comment induire du délai?)
+* __Routage__ L3
 
 Média:
 
-* __protocoles__ de transport: retrouver les données média dans les paquets IP
-* __formats__ audio, vidéo, meta-données
-* __contraintes__: trouver l'équilibre entre qualité du signal, bande passante et délai
-* __codecs__: h264, aac
-* __luma__ vs __chroma__
-* __echantillonnage__
+* __Protocoles__ de transport: retrouver les données média dans les paquets IP
+* __Formats__ audio, vidéo, meta-données
+* __Contraintes__: trouver l'équilibre entre qualité du signal, bande passante et délai
+* __Codecs__: h264, aac
+* __Luma__ vs __chroma__
+* __Echantillonnage__
 
-IT:
+TI:
 
-* __Linux Shell__: configurer un système (comme un encodeur vidéo) _headless_ par ssh
-* __scripting__: contrôler et/ou surveiller un équipement ou service à travers un _web API_
-* __couche de contrôle__ des signaux avec [NMOS](https://specs.amwa.tv/nmos/)
-* __infonuagique__: distribution du signal de sortie sur une platforme en ligne
+* __Linux Shell__: configurer un système (comme un encodeur vidéo) _headless_ par ssh + bash
+* __Scripting__: contrôler et/ou surveiller un équipement ou service à travers un _web API_ (python + ansible)
+* __Couche de contrôle__ des signaux avec [NMOS](https://specs.amwa.tv/nmos/)
+* __Infonuagique__: distribution du signal de sortie sur une platforme en ligne
+
+Analogique:
+
+* __SnR__ mesuré à la sortie d'un microphone + pré-amplificateur 
+* __Ligthmeter__ pour l'éclairage d'appoint
+
 
 # Aperçu
 
@@ -86,18 +91,18 @@ dans un format adapté au transport sur Internet.
 # Requis techniques
 
 * 2 PCs
-* commutateur Cisco simple
-* une caméra IP
-* logiciels libres: VLC, OBS, etc. Wireshark
+* Commutateur Cisco simple
+* Une caméra IP
+* Logiciels libres: VLC, OBS, etc. Wireshark
 
 [Guide de l'instructeur.](./guide-instructeur.md)🤓
 
 # Déroulement
 
-1. préparation et branchement du matériel: une source (caméra) + un canal (réseau) + une destination (moniteur)
-2. configuration d’une chaîne média simple
-3. insertion d'un équipement inconnu
-4. utilisation d’un mixeur et ajout de nouvelles sources 
-5. formatage du flux de sortie
+1. Préparation et branchement du matériel: une source (caméra) + un canal (réseau) + une destination (moniteur)
+2. Configuration d’une chaîne média simple
+3. Insertion d'un équipement inconnu
+4. Utilisation d’un mixeur et ajout de nouvelles sources 
+5. Formatage du flux de sortie
 
 [C'est parti!](./laboratoire.md)🚀
