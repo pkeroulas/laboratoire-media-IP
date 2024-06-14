@@ -1,58 +1,71 @@
 Laboratoire: Intro au Média sur IP
 ----------------------------------
 
-# Phase 1: préparation du matériel 
+[TODO] Split ce fichier en plusieurs
+
+# Phase 1: Préparation du Matériel 
 
 ![phase1](./img/laboratoire_media_sur_IP_phase1.png)
 *[Diagramme source](https://docs.google.com/drawings/d/1CZXJb9VgcKqT9M0tsVFD6_huqsBrnm8NyrAL9IfMmnI/edit)*
 
+## Commutateur
+
+* Connecter votre poste de travail au commutateur
+* Prendre note qu'une adresse vous a été assigné par DHCP
+* Se logger sur le commutateur avec un client ssh (Prompt ou Putty.exe)
+    * `ssh [SWITCH_USER]@[SWITCH_IP]` pass:`[SWITCH_PASS]`
+* Découvrir la configuration initiale
+    * la plage d'adresse dhcp
+* Confirmer la connectivité avec votre poste de travail
+    * `show lldp / cdp ...`
+    * `show interface status ...`
+
 ## Caméra
 
 * [TBD]
-* Connecter au commutateur, Port 1
-* Prendre note de l’IP de l’appareil 
-* Configurer avec une IP destination dans le range multicast et avec un port
-    * 💡 exemple: `225.0.0.1:5000`
-    * ❓ Saviez-vous qu’il existe une relation entre les IPs multicast et l’adresse MAC? Tenter de définir la vôtre (google).
+* Connecter au commutateur
+* Trouver son IP ([TODO]: MAC @ + interroger le serveur DHCP, + table ARP)
+* Utiliser un navigateur pour trouver la page de configuration de la caméra
 
 ## Moniteur
 
-* Connecter au commutateur, Port 3
-* Ouvrir une session sur le PC
-* Ouvrir un terminal (Win & Linux) ou Putty.exe (Win)
-
-## Commutateur
-* Se logger sur le commutateur
-    * `ssh [SWITCH_USER]@[SWITCH_IP]` pass:`[SWITCH_PASS]`
-* confirmer la connectivité avec lldp
+Le moniteur peut-être un PC dédié ou bien votre poste de travail. Il doit avoir:
+* un client ssh
+* vlc, ffmpeg
+* whirshark
 
 # Phase 2: configuration d’une chaîne média simple
 
 ![phase2](./img/laboratoire_media_sur_IP_phase2.png)
 *[Diagramme source](https://docs.google.com/drawings/d/1q6MF5KY4nLmCBxLiehqOJvOSK_qoAchkg8bCS-ulvEI/edit)*
 
+## Caméra
+
+* Dans la configuration du flux video, entrer les paramètres: [une combinaison de param qui marche]
+* Pour le transport de ce flux, configurer avec une IP destination dans la plage multicast et avec un port
+    * 💡 exemple: `225.0.0.1:5000`
+    * ❓ Saviez-vous qu’il existe une relation entre une adresse IP multicast et l’adresse MAC? Tenter de la calculer la vôtre (google).
+    * ❓ D'après vos connaissances sur le multicast, les paquets seront-t-ils de type TCP ou UDP?
+
 ## Moniteur
 
-* Vérifier la présence des paquets venant de la source avec Wireshark et les inspecter
-    * ❓ Pourquoi les paquets n'ont-ils aucune réponse? (UDP)
-    * ❓ À partir de quelles information de l'entête RTP, les paquets peuvent-ils ordonnées par un
-    récepteurs? (_timesatmp_ + _sequence number_)
+* Vérifier la présence des paquets venant de la source avec Wireshark
 * Ouvrir VLC et tenter de lire le stream 
-    * url: `udp://225.0.0.1:5000`
+    * url: `[TODO: protocole]://225.0.0.1:5000`
 * (Windows) ça ne marche pas, il faut ajouter une permission à VLC dans le pare-feu, puis réessayer
     * ❓ En déduire le fonctionnement Wireshark par rapport aux autre applications
 * Évaluer la qualité et mesurer les caractéristiques de l’image et du son
-* Fermer VLC mais laisser Wireshark et la session SSH ouverts
 
 ## Commutateur
 
 Configurer l’IGMP:
 
-* Observer le débit dans le port entrant (caméra) et d’autres port
-    * `sh int et0`
+* Observer le débit dans le port entrant (caméra)
+    * `show interface et0`
+* Comparer avec le débit sur le port de votre PC ou celui du Moniteur
     * ❓ En déduire le mode de fonctionnement actuel de la switch (flooding)
-    * ❓ Penser aux conséquences. Est-ce souhaitable? (non).
-* Activer le IGMP snooping sur le commutateur
+    * ❓ Penser aux conséquences. Est-ce souhaitable? (non....)
+* Activer le IGMP snooping sur le commutateur ([TODO: Trouver la commande])
 * Constater la perte de signal et observer à nouveau le débit sortant sur les ports
 
 ## Moniteur
@@ -60,13 +73,34 @@ Configurer l’IGMP:
 * Relance VLC pour rétablir l'image
     * ❓ Déduire le principe de _broadcast_ vs _multicast_.
 * Chercher les paquets IGMP dans Wireshark
-    * 💡 filtre = `igmp`
+    * 💡 Filtre = `igmp`
     * ❓ Interpréter le fonctionnement du protocol IGMP.
+
+## Inspection de Paquet Media
+
+Toujours dans la session Wireshark trouver et inspecter un paquet RTP
+* Filtrer la liste de paquets pour ne garder que le traffic media. 💡 Filtre = `ip.dst == ...`
+* Décoder le flux UDP.port=5000 comme du RTP. 💡 `Clique-droit > Decoder`
+
+Sélectionner et inspecter un paquet pour parcourir les couches OSI:
+* ❓ Ethernet: trouver l'adresse MAC de destination
+    * En quoi diffère-t-elle des paquets unicast? (la MAC ne correspond à aucun équipement)
+    * Validder qu'elle dérive bien de l'adresse IP multicast? (en appliqunt la formule)
+* ❓ IP: valider les adresses source et destination
+* ❓ Transport:
+    * Pourquoi les paquets n'ont-ils aucune réponse? (UDP)
+    * Retrouver le port de destination.
+* ❓ RTP: À partir de quelles information de l'entête RTP, les paquets peuvent-ils ordonnées par un
+    récepteurs? 💡 Comparer plusiseurs paquets susccessifs. (_timesatmp_ + _sequence number_)
 
 # Phase 3: insertion d’un équipement inconnu
 
 ![phase3](./img/laboratoire_media_sur_IP_phase3.png)
 *[Diagramme source](https://docs.google.com/drawings/d/1g69jHkFmMmtmeYx_w6pYkU2EEvJdAaBjWFwXzCenr1w/edit)*
+
+[TODO] créer une source parasite pour créer un conflit d'adresse IP mcast, au choix:
+- un script python
+- une commande ffmpeg pour streamer un fichier
 
 ## Mixeur
 
