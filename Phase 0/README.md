@@ -12,7 +12,7 @@
 
 # Installation des utilitaires de base
 ## Windows
->winget install VideoLAN.vlc ffmpeg obsproject.obsstudio
+>winget install VideoLAN.vlc Gyan.FFmpeg obsproject.obsstudio
 
 ## Linux
 >sudo apt install obs-studio vlc ffmpeg
