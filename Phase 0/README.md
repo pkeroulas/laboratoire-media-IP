@@ -3,11 +3,12 @@
 - Windows 10 ou supérieur
 - Utilitaire winget (tester avec juste "winget" dans un terminal)
     - *Si celui-ci n'est pas installé, il est possible de le télécharger depuis [le store](https://apps.microsoft.com/detail/9nblggh4nns1?rtc=1&hl=en-us&gl=US) ou directement du [GitHub](https://github.com/microsoft/winget-cli/releases/latest).*
-        
+- Wireshark
 
 ## Linux
 - Ubuntu 22 ou supérieur
 - Effectuer les mises-à-jour
+- Wireshark
 
 # Installation des utilitaires de base
 ## Windows
