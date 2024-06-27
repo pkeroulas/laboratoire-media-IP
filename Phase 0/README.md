@@ -6,7 +6,7 @@
 - Wireshark
 
 ## Linux
-- Ubuntu 22 ou supérieur
+- Ubuntu 22 ou supérieur (*Ubuntu 24 recommandé*)
 - Effectuer les mises-à-jour
 - Wireshark
 
@@ -16,6 +16,10 @@
 
 ## Linux
 >sudo apt install obs-studio vlc ffmpeg
+- *Attention, si vous utilisez une version inférieur à Ubuntu 24, vous devez ajouter le répertoire avant l'installation*
+    >sudo add-apt-repository ppa:obsproject/obs-studio\
+    >sudo apt update\
+    >sudo apt install obs-studio
 
 # Installation de OBS-RTSPServer
 ## Windows
