@@ -44,6 +44,14 @@
     >sudo obs
 
 
+# Liens Utiles
+- [Doc FFmpeg](https://ffmpeg.org/ffmpeg-all.html#rtsp)
+- [Wireshark - Listen to VoIP packets](https://www.wireshark.org/docs/wsug_html_chunked/ChTelPlayingCalls.html)
+- [StackOverflow - Joining a multicast stream via RTSP using ffplay](https://stackoverflow.com/questions/32561070/joining-a-multicast-stream-via-rtsp-using-ffplay)
+- [RTSP 1.0 spec](https://www.rfc-editor.org/rfc/pdfrfc/rfc2326.txt.pdf)
+- [RTSP 2.0 spec](https://www.rfc-editor.org/rfc/pdfrfc/rfc7826.txt.pdf)
+- [GitHub Repo - obs-rtspserver](https://github.com/iamscottxu/obs-rtspserver)
+
 
 
 
