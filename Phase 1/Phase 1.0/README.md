@@ -1,4 +1,4 @@
-# Phase 1.1 - VLC à VLC (RTP)
+# Phase 1.0 - VLC à VLC (RTP)
 ![alt text](./img/Phase_1_S1.0_topologie.png)
 
 ## Prérequis
