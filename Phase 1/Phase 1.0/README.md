@@ -66,6 +66,11 @@ ex : *rtp://10.179.11.101:5004*\
 2. Sur la machine source, ouvrir un gestionnaire de tâches et ouvrir l'interface utilisée pour le flux vidéo.\
 ***Noter la bande passante utilisée (approximative)***
 ![alt text](./img/p1.0_tmgr_pic2.png)\
-Que pouvez-vous conclure avec vos résultats ?
-## Étape 5 - Retour sur l'exercice
+Que pouvez-vous conclure avec vos résultats ?\
+*Vous pouvez fermer le flux vidéo à ce point. \
+Toutefois, il peut être intéressant de laisser jouer le flux vidéo un certain temps afin de valider la robustesse de la configuration actuelle.*
 
+## Étape 5 - Retour sur l'exercice
+1. Effectuer un résumé de l'exercice ainsi qu'une courte explication de la situation.\
+Spécifiez les protocoles, bandes passantes et autres informations nécessaires afin qu'un autre étudiant puisse comprendre la situation rapidement sans aucune information antérieure.
+2. Si vous avez eu des problèmes, apporter des théories potentielles sur la cause / les causes du / des problèmes, les impacts observés ainsi que des potentiels moyens de résolution.
