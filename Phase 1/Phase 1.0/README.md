@@ -43,13 +43,12 @@ Ensuite, cliquer sur le bouton **Next**.\
 Que pouvez-vous en conclure avec cette capture ?
 
 ## Étape 3 - Lecture du flux vidéo
-1. Sur la machine qui servira de moniteur, ouvrir VLC.\
+1. Sur la machine qui servira de moniteur, ouvrir VLC.
 2. Dans la barre de menu, cliquer sur **Media** puis sur **Open Network Stream**.\
 ![vlc_etape2_2](./img/p1.1_vlc_pic12.png)
 3. Entrer l'URL de la video. Celui-ci devrait être composé du type de transport, de l'adresse source, du port et du chemin.\
 ex : *rtp://10.179.11.104:5004*\
 **Ne pas encore cliquer sur *PLAY* !**\
-![vlc_etape2_3](./img/p1.1_vlc_pic13.png)\
 ![alt text](image.png)
 
 
