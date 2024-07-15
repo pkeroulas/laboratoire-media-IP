@@ -1,4 +1,5 @@
 # Phase 1.1 - VLC à VLC (RTP)
+![alt text](./img/Phase_1_S1.0_topologie.png)
 
 ## Prérequis
 - Un fichier vidéo en provenance du [Netflix Open Content](https://opencontent.netflix.com/)
