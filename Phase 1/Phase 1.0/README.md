@@ -38,8 +38,8 @@ Ensuite, cliquer sur le bouton **Next**.\
 ![vlc_etape1_10](./img/p1.1_vlc_pic10.png)
 11. S'assurer que la fonction de répétition (la boucle) soit en bleu.\
 ![vlc_etape1_11](./img/p1.1_vlc_pic11.png)
-2. Attendre quelques secondes et arrêter la capture sur la machine moniteur.
-![vlc_etape3_6](./img/p1.1_vlc_pic17.png)
+2. Attendre quelques secondes et arrêter la capture sur la machine moniteur.\
+![vlc_etape3_6](./img/p1.1_vlc_pic17.png)\
 Que pouvez-vous en conclure avec cette capture ?
 
 ## Étape 3 - Lecture du flux vidéo
