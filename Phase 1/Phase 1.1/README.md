@@ -1,5 +1,5 @@
 # Phase 1.1 - VLC à FFmpeg (RTP)
-![alt text](./img/Phase_1_S1.1_topologie.png)
+![Topologie](./img/Phase_1_S1.1_topologie.png)
 
 ## Prérequis
 - Un fichier vidéo en provenance du [Netflix Open Content](https://opencontent.netflix.com/)
@@ -48,15 +48,19 @@ Ensuite, cliquer sur le bouton **Next**.\
 ## Étape 3 - Analyse des débits
 1. Sur la machine moniteur, ouvrir un gestionnaire de tâches. Ouvrir l'onglet *Performance* et sélectionner l'interface utilisée pour le flux vidéo.\
 ***Noter la bande passante utilisée (approximative)***
-![alt text](./img/p1.0_tmgr_pic1.png)
+![Gestionnaire des tâches (Moniteur)](./img/p1.0_tmgr_pic1.png)
 2. Sur la machine source, ouvrir un gestionnaire de tâches et ouvrir l'interface utilisée pour le flux vidéo.\
 ***Noter la bande passante utilisée (approximative)***
-![alt text](./img/p1.0_tmgr_pic2.png)\
+![Gestionnaire des tâches (Source)](./img/p1.0_tmgr_pic2.png)\
 Que pouvez-vous conclure avec vos résultats ?\
 *Vous pouvez fermer le flux vidéo à ce point. \
 Toutefois, il peut être intéressant de laisser jouer le flux vidéo un certain temps afin de valider la robustesse de la configuration actuelle.*
 
-## Étape 4 - Ajout d'un flux intrus
+## Étape 4 - Ajout d'un flux supplémentaire
+Maintenant que le flux vidéo est fonctionnel, il est temps d'ajouter une petite entrave. Il est temps d'ajouter une seconde source vidéo.\
+*Pour la seconde source vidéo, vous pouvez utiliser un autre ordinateur ou bien demander à un collègue.*\
+![Topologie 2](./img/Phase_1_S1.1_topologie2.png)
+1. Sur la seconde machine source, effectuer exactement la même procédure de l'[étape 1](##-Étape-1---Configuration-de-l'émetteur-(Mux)) et [TEST](##-Prérequis)
 
 
 ## Étape 5 - Retour sur l'exercice
