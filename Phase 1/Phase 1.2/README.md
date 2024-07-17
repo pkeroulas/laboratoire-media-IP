@@ -11,48 +11,48 @@
 ## Étape 1 - Configuration de l'émetteur (Mux)
 1. Sur la machine qui servira d'émetteur, ouvrir VLC
 2. Dans la barre de menu, cliquer sur **Media** puis sur **Stream**.\
-![vlc_etape1_2](./img/p1.1_vlc_pic2.png)
+![vlc_etape1_2](./img/p1.2_vlc_pic2.png)
 3. Cliquer sur **+ Add...**\
-![vlc_etape1_3](./img/p1.1_vlc_pic3.png)
+![vlc_etape1_3](./img/p1.2_vlc_pic3.png)
 4. Choisir le fichier vidéo.\
-![vlc_etape1_4](./img/p1.1_vlc_pic4.png)
+![vlc_etape1_4](./img/p1.2_vlc_pic4.png)
 5. Cliquer sur **Stream**.\
-![vlc_etape1_5](./img/p1.1_vlc_pic5.png)
+![vlc_etape1_5](./img/p1.2_vlc_pic5.png)
 6. Cliquer sur **Next**.\
 ![vlc_etape1_6](./img/p1.1_vlc_pic6.png)
 7. Cocher la case *Display Locally* puis sélectionner la valeur de *New Destination* à **RTSP**.\
 Ensuite, cliquer sur le bouton **Add**.\
-![vlc_etape1_7](./img/p1.1_vlc_pic7.png)
+![vlc_etape1_7](./img/p1.2_vlc_pic7.png)
 8. Dans la zone *Path*, entrer **/vlc**.\
 Ensuite, cliquer sur le bouton **Next**.\
-![vlc_etape1_8](./img/p1.1_vlc_pic8.png)
+![vlc_etape1_8](./img/p1.2_vlc_pic8.png)
 9. Cocher la case pour *Activate Transcoding* puis cliquer sur le bouton **Next**.\
-![vlc_etape1_9](./img/p1.1_vlc_pic9.png)
+![vlc_etape1_9](./img/p1.2_vlc_pic9.png)
 10. Cliquer sur le bouton **Stream**.\
-![vlc_etape1_10](./img/p1.1_vlc_pic10.png)
+![vlc_etape1_10](./img/p1.2_vlc_pic10.png)
 11. S'assurer que la fonction de répétition (la boucle) soit en bleu.\
-![vlc_etape1_11](./img/p1.1_vlc_pic11.png)
+![vlc_etape1_11](./img/p1.2_vlc_pic11.png)
 
 ## Étape 2 - Configuration du récepteur
 1. Sur la machine qui servira de moniteur, ouvrir VLC.\
 2. Dans la barre de menu, cliquer sur **Media** puis sur **Open Network Stream**.\
-![vlc_etape2_2](./img/p1.1_vlc_pic12.png)
+![vlc_etape2_2](./img/p1.2_vlc_pic12.png)
 3. Entrer l'URL de la video. Celui-ci devrait être composé du type de transport, de l'adresse source, du port et du chemin.\
 ex : *rtsp://10.179.11.104:8554/vlc*\
 **Ne pas encore cliquer sur *PLAY* !**\
-![vlc_etape2_3](./img/p1.1_vlc_pic13.png)
+![vlc_etape2_3](./img/p1.2_vlc_pic13.png)
 
 ## Étape 3 - Capture des paquets et lecture du flux vidéo
 1. Ouvrir Wireshark et sélectionner l'interface par laquelle le flux vidéo sera reçu en double-cliquant dessus.\
-![vlc_etape3_4](./img/p1.1_vlc_pic14.png)
+![vlc_etape3_4](./img/p1.2_vlc_pic14.png)
 2. Retourner sur VLC puis cliquer sur **Play**.\
-![vlc_etape3_2](./img/p1.1_vlc_pic15.png)
+![vlc_etape3_2](./img/p1.2_vlc_pic15.png)
 3. Vérifier que la vidéo est bien fluide.
 4. Laisser le flux vidéo jouer pendant au moins 30 secondes.\
-![vlc_etape3_4](./img/p1.1_vlc_pic16.png)
+![vlc_etape3_4](./img/p1.2_vlc_pic16.png)
 5. Fermer VLC.
 6. Sur Wireshark, arrêter la capture de paquets.\
-![vlc_etape3_6](./img/p1.1_vlc_pic17.png)
+![vlc_etape3_6](./img/p1.2_vlc_pic17.png)
 
 ## Étape 4 - Analyse des paquets
 
