@@ -19,7 +19,7 @@
 5. Cliquer sur **Stream**.\
 ![vlc_etape1_5](./img/p1.2_vlc_pic5.png)
 6. Cliquer sur **Next**.\
-![vlc_etape1_6](./img/p1.1_vlc_pic6.png)
+![vlc_etape1_6](./img/p1.2_vlc_pic6.png)
 7. Cocher la case *Display Locally* puis sélectionner la valeur de *New Destination* à **RTSP**.\
 Ensuite, cliquer sur le bouton **Add**.\
 ![vlc_etape1_7](./img/p1.2_vlc_pic7.png)
