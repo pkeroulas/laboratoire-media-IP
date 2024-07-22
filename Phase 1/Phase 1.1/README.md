@@ -5,7 +5,7 @@
 - Un fichier vidéo en provenance du [Netflix Open Content](https://opencontent.netflix.com/)
     - ex : *Meridian_UHD4k5994_HDR_P3PQ.mp4*\
     *Si le fichier choisi est trop lourd pour votre ordinateur, en sélectionner un plus léger*
-- Deux ordinateurs avec VLC (Windows ou Linux)
+- Deux ordinateurs avec VLC et FFmpeg (Windows ou Linux)
 - Une connexion réseau entre les deux ordinateurs
 - Les adresses IP des deux ordinateurs
 - Connaissances de base sur le concept du [RTP](https://en.wikipedia.org/wiki/Real-time_Transport_Protocol)
