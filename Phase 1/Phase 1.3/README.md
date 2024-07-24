@@ -1,4 +1,5 @@
 # Phase 1.3 - VLC à FFmpeg (RTSP)
+![Topologie](./img/Phase_1_S1.3_topologie.png)
 
 ## Prérequis
 - Un fichier vidéo en provenance du [Netflix Open Content](https://opencontent.netflix.com/)
