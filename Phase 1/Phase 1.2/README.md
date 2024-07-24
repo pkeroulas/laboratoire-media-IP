@@ -25,18 +25,17 @@ Ensuite, cliquer sur le bouton **Add**.
 
 ## Étape 2 - Configuration du récepteur
 1. Sur la machine qui servira de moniteur, ouvrir VLC.\
-2. Dans la barre de menu, cliquer sur **Media** puis sur **Open Network Stream**.\
-![vlc_etape2_2](./img/p1.2_vlc_pic12.png)
+2. Dans la barre de menu, cliquer sur **Media** puis sur **Open Network Stream**.
 3. Entrer l'URL de la video. Celui-ci devrait être composé du type de transport, de l'adresse source, du port et du chemin.\
-ex : *rtsp://10.179.11.104:8554/vlc*\
-**Ne pas encore cliquer sur *PLAY* !**\
+ex : `rtsp://10.179.11.104:8554/vlc`\
+**! Ne pas encore cliquer sur *PLAY* !**\
 ![vlc_etape2_3](./img/p1.2_vlc_pic13.png)
 
 ## Étape 3 - Capture des paquets et lecture du flux vidéo
 1. Ouvrir Wireshark et sélectionner l'interface par laquelle le flux vidéo sera reçu en double-cliquant dessus.\
 ![vlc_etape3_4](./img/p1.2_vlc_pic14.png)
 2. Retourner sur VLC puis cliquer sur **Play**.\
-![vlc_etape3_2](./img/p1.2_vlc_pic15.png)
+![vlc_etape3_2](./img/p1.2_vlc_pic13.png)
 3. Vérifier que la vidéo est bien fluide.
 4. Laisser le flux vidéo jouer pendant au moins 30 secondes.\
 ![vlc_etape3_4](./img/p1.2_vlc_pic16.png)
