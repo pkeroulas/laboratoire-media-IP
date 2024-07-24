@@ -38,3 +38,21 @@ Ensuite, cliquer sur le bouton **Next**.\
     - *La touche **Esc** ou la combinaison ***Ctrl+C*** peut être utilisée.*
 6. Arrêter la capture Wireshark.
 
+## Étape 3 - Analyse de la capture
+1. Dans la capture Wireshark, appliquer le filtre `rtsp or rtcp`.
+2. Observer l'échange RTSP.
+    - *Quelles sont les étapes de l'échange et quelles sont les informations échangées ?*
+3. Dans l'onglet *Telephony* de la barre de menu, sélectionner *RTSP* puis *Packet Counter*.\
+![Telephony > RTSP > Packet Counter](./img/p1.3_ws_pic1.png)
+4. Observer les statistiques et déterminer si l'échange s'est passé parfaitement.
+    - *Note : Cette page peut être **très** utile pour un survol d'un échange RTSP*
+5. Dans l'échange RTSP, sélectionner le paquet incluant le SDP.
+6. Dans le paquet sous la section *Real Time Streaming Protocol*, observer les informations du SDP.
+    - *Pour une vue plus claire, copier le SDP en tant que texte imprimable et coller dans un bloc-note.*
+7. Identifier les composantes du SDP en détails.
+
+
+## Étape 4 - Retour sur l'exercice
+1. Effectuer un résumé de l'exercice ainsi qu'une courte explication de la situation.\
+Spécifiez les protocoles, bandes passantes et autres informations nécessaires afin qu'un autre étudiant puisse comprendre la situation rapidement sans aucune information antérieure.
+2. Si vous avez eu des problèmes, apporter des théories potentielles sur la cause / les causes du / des problèmes, les impacts observés ainsi que des potentiels moyens de résolution.
