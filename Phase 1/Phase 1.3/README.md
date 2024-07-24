@@ -25,12 +25,16 @@ Ensuite, cliquer sur le bouton **Next**.\
 10. Cliquer sur le bouton **Stream**.
 11. S'assurer que la fonction de répétition (la boucle) soit en bleu.
 
-## Étape 2 - Configuration du récepteur
+## Étape 2 - Configuration du récepteur et capture des échanges
 1. Sur la machine qui servira de moniteur, ouvrir un terminal.
 2. Ouvrir Wireshark et démarrer une capture.\
 ![Photo de Wireshark en capture](./img/p1.3_ws_pic1.png)
 3. Dans le terminal, ouvrir le flux vidéo avec la commande `ffplay -i rtsp://[adresseIP]:[Port]/[chemin]`.
-    - *ex: ffplay -i rtsp://10.179.11.104:8554/vlc*
+    - *ex: `ffplay -i rtsp://10.179.11.104:8554/vlc`*
 4. Attendre quelques secondes le temps que le flux démarre.\
 ![Photo du flux vidéo et du terminal](./img/p1.3_cmd_pic3.png)\
-*Laisser le flux vidéo fonctionner*
+*Laisser le flux vidéo fonctionner quelques secondes*
+5. Arrêter le flux vidéo.
+    - *La touche **Esc** ou la combinaison ***Ctrl+C*** peut être utilisée.*
+6. Arrêter la capture Wireshark.
+
