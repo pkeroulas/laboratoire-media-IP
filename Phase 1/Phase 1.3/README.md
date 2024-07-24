@@ -27,8 +27,7 @@ Ensuite, cliquer sur le bouton **Next**.\
 
 ## Étape 2 - Configuration du récepteur et capture des échanges
 1. Sur la machine qui servira de moniteur, ouvrir un terminal.
-2. Ouvrir Wireshark et démarrer une capture.\
-![Photo de Wireshark en capture](./img/p1.3_ws_pic1.png)
+2. Ouvrir Wireshark et démarrer une capture sur l'interface réseau utilisée.
 3. Dans le terminal, ouvrir le flux vidéo avec la commande `ffplay -i rtsp://[adresseIP]:[Port]/[chemin]`.
     - *ex: `ffplay -i rtsp://10.179.11.104:8554/vlc`*
 4. Attendre quelques secondes le temps que le flux démarre.\
