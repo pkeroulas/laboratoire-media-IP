@@ -54,3 +54,11 @@ Examiner et analyser les paquets RTP
 
 Examiner le SDP ?\
 ![wip_analyse_SDP](./img/image_sdp.png)
+
+
+
+
+## Étape 5 - Retour sur l'exercice
+1. Effectuer un résumé de l'exercice ainsi qu'une courte explication de la situation.\
+Spécifiez les protocoles, bandes passantes et autres informations nécessaires afin qu'un autre étudiant puisse comprendre la situation rapidement sans aucune information antérieure.
+2. Si vous avez eu des problèmes, apporter des théories potentielles sur la cause / les causes du / des problèmes, les impacts observés ainsi que des potentiels moyens de résolution.
