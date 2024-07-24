@@ -37,6 +37,7 @@ ex : `rtsp://10.179.11.104:8554/vlc`\
 2. Retourner sur VLC puis cliquer sur **Play**.\
 ![vlc_etape3_2](./img/p1.2_vlc_pic13.png)
 3. Vérifier que la vidéo est bien fluide.
+    - *À considérer : Certains fichiers vidéo proposés par Netflix peuvent être trop lourd pour certains ordinateurs et causer des problèmes*
 4. Laisser le flux vidéo jouer pendant au moins 30 secondes.\
 ![vlc_etape3_4](./img/p1.2_vlc_pic16.png)
 5. Fermer VLC.
