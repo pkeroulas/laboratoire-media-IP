@@ -45,18 +45,13 @@ ex : `rtsp://10.179.11.104:8554/vlc`\
 ![vlc_etape3_6](./img/p1.2_vlc_pic17.png)
 
 ## Étape 4 - Analyse des paquets
-
-[WIP] - Filtres sur Wireshark et autres analyses.\
-Examiner l'échange RTSP ? \
-![wip_echange_rtsp](./img/image_echange_rtsp.png)
-
-Examiner et analyser les paquets RTP
-
-Examiner le SDP ?\
-![wip_analyse_SDP](./img/image_sdp.png)
-
-
-
+1. Dans la capture Wireshark, appliquer le filtre `rtsp or rtcp`.
+2. Observer l'échange RTSP.
+    - *Quelles sont les étapes de l'échange et quelles sont les informations échangées ?*
+3. Dans l'onglet *Telephony* de la barre de menu, sélectionner *RTSP* puis *Packet Counter*.\
+![Telephony > RTSP > Packet Counter](./img/p1.2_ws_pic1.png)
+4. Observer les statistiques et déterminer si l'échange s'est passé parfaitement.
+    - *Note : Cette page peut être **très** utile pour un survol d'un échange RTSP*
 
 ## Étape 5 - Retour sur l'exercice
 1. Effectuer un résumé de l'exercice ainsi qu'une courte explication de la situation.\
