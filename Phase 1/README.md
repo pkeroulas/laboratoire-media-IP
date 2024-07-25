@@ -16,7 +16,6 @@ Cette phase traite les concepts de communication en unicast à travers le RTP et
 ## Phase 1.4 - FFmpeg à FFmpeg (RTSP)
 [Lien de la phase](./Phase%201.4/README.md)
 [concept ?](https://stackoverflow.com/questions/26999595/what-steps-are-needed-to-stream-rtsp-from-ffmpeg)\
-[Serveur ?](https://github.com/bluenviron/mediamtx)
 
 ## Phase 1.5 - FFmpeg distant à FFmpeg (RTSP)
 [Lien de la phase](./Phase%201.5/README.md)
