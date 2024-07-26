@@ -13,11 +13,14 @@
 - >sudo ip r add *dest_@* dev *net_int*
     - *ex: sudo ip r add 239.192.0.21 dev ens4f1*
 
-## Phase 2.1 - VLC à VLC
+## Phase 2.0 - VLC à VLC (RTP)
 
-## Phase 2.2 - VLC à FFmpeg
+## Phase 2.1 - FFmpeg à FFmpeg (RTP)
 
-## Phase 2.3 - FFmpeg à FFmpeg
+## Phase 2.2 - FFmpeg à FFmpeg + Intrus (RTP)
+
+## Phase 2.3 - RTSP Multicast
 - http://trac.ffmpeg.org/wiki/StreamingGuide
 - https://ffmpeg.org/ffmpeg-all.html#rtsp 
-## Phase 2.4 - FFmpeg à FFmpeg + Intrus
+- https://www.peaknx.com/pub/media/peaknx/downloads/documents/quickstarts/Media_MTX_Quickstart.pdf
+
