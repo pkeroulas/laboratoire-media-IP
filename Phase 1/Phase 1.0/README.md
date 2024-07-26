@@ -35,11 +35,11 @@ Ensuite, cliquer sur le bouton **Next**.\
 ## Étape 2 - Capture des paquets et lecture du flux vidéo
 1. Sur la machine qui sert de moniteur, ouvrir Wireshark et sélectionner l'interface par laquelle le flux vidéo sera reçu en double-cliquant dessus.\
 ![vlc_etape3_4](./img/p1.0_vlc_pic14.png)
-10. Sur la machine source, de retour dans vlc, cliquer sur le bouton **Stream**.\
+2. Sur la machine source, de retour dans vlc, cliquer sur le bouton **Stream**.\
 ![vlc_etape1_10](./img/p1.0_vlc_pic10.png)
-11. S'assurer que la fonction de répétition (la boucle) soit en bleu.\
+3. S'assurer que la fonction de répétition (la boucle) soit en bleu.\
 ![vlc_etape1_11](./img/p1.0_vlc_pic11.png)
-2. Attendre quelques secondes et arrêter la capture sur la machine moniteur.\
+4. Attendre quelques secondes et arrêter la capture sur la machine moniteur.\
 ![vlc_etape3_6](./img/p1.0_vlc_pic17.png)\
 Que pouvez-vous en conclure avec cette capture ?\
 *La machine reçoit les paquets sans être abonnée*
