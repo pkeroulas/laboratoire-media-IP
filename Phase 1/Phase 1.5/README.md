@@ -1,4 +1,5 @@
 # Phase 1.5 - FFmpeg Distant à FFmpeg (RTSP)
+![Topologie](./img/Phase_1_S1.5_topologie2_resized.png)
 
 ## Prérequis
 - Un fichier vidéo en provenance du [Netflix Open Content](https://opencontent.netflix.com/)
