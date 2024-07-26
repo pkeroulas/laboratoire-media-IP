@@ -18,14 +18,14 @@
 
 ## Étape 2 - Configuration de l'émetteur (Mux)
 1. Lancer un deuxième terminal ou ouvrir un autre onglet de terminal
-2. Lancer le flux vidéo avec ffmpeg avec la commande suivante : `ffmpeg -re -stream_loop -1 -i [Path/to/file.mp4] -c copy -f rtsp rtsp://[adresse]:[Port]/[Path]`
-    - *ex : `ffmpeg -re -stream_loop -1 -i "C:\Users\lab\Videos\file_example_MP4_1920_18MG.mp4" -c copy -f rtsp rtsp://localhost:8554/mystream`*
+2. Lancer le flux vidéo avec ffmpeg avec la commande suivante : `ffmpeg -re -stream_loop -1 -i [Path/to/file.mp4] -c copy -f rtsp rtsp://[adresse_IP_Serveur]:[Port]/[Path]`
+    - *ex : `ffmpeg -re -stream_loop -1 -i "C:\Users\lab\Videos\file_example_MP4_1920_18MG.mp4" -c copy -f rtsp rtsp://10.179.11.101:8554/mystream`*
 3. Valider que le flux est bien commencé.
 
 ## Étape 3 - Configuration du récepteur et capture des échanges
 1. Sur la machine qui servira de moniteur, ouvrir un terminal.
 2. Ouvrir Wireshark et démarrer une capture sur l'interface réseau utilisée.
-3. Dans le terminal, ouvrir le flux vidéo avec la commande `ffplay -i rtsp://[adresseIP]:[Port]/[chemin]`.
+3. Dans le terminal, ouvrir le flux vidéo avec la commande `ffplay -i rtsp://[adresseIP_serveur]:[Port]/[chemin]`.
     - *ex: `ffplay -i rtsp://10.179.11.101:8554/mystream`*
 4. Attendre quelques secondes le temps que le flux démarre.\
 *Laisser le flux vidéo fonctionner quelques secondes*
