@@ -1,10 +1,10 @@
-# Phase 2.0 - VLC à VLC (RTP)
-![alt text](./img/Phase_1_S1.0_topologie.png)
+# Phase 2.0 - VLC à VLC (RTP sans IGMP SnoopSnoop)
+![Topologie phase 2.0](./img/Phase_2_S2.0_topologie.png)
 
 ## Prérequis
 - Un fichier vidéo en provenance du [Netflix Open Content](https://opencontent.netflix.com/)
     - ex : *Meridian_UHD4k5994_HDR_P3PQ.mp4*
-- Deux ordinateurs avec VLC (Windows ou Linux)
+- Trois ordinateurs avec VLC (Windows ou Linux)
 - Une connexion réseau entre les deux ordinateurs
 - Les adresses IP des deux ordinateurs
 - Connaissances de base sur le concept du [RTP](https://en.wikipedia.org/wiki/Real-time_Transport_Protocol)
@@ -27,23 +27,24 @@ Ensuite, cliquer sur le bouton **Next**.
 **Ne pas** encore cliquer sur le bouton **Stream**
 
 ## Étape 2 - Capture des paquets et lecture du flux vidéo
-1. Sur la machine qui sert de moniteur, ouvrir Wireshark et sélectionner l'interface par laquelle le flux vidéo sera reçu en double-cliquant dessus.
-2. Sur la machine source, de retour dans vlc, cliquer sur le bouton **Stream**.
-3. S'assurer que la fonction de répétition (la boucle) soit en bleu.
-4. Attendre quelques secondes et arrêter la capture sur la machine moniteur.\
-![vlc_etape3_6](./img/p1.0_vlc_pic17.png)\
+1. En fonction de votre adresse IP multicast, calculer l'adresse MAC multicast associée et en prendre note..
+2. Calculer l'adresse MAC de l'adresse IP multicast **239.86.0.1** et en prendre note.
+3. Sur la machine qui sert de moniteur, ouvrir Wireshark et sélectionner l'interface par laquelle le flux vidéo sera reçu en double-cliquant dessus.
+4. Sur la machine qui sert de 2e moniteur, ouvrir Wireshark et sélectionner l'interface qui est connectée au réseau utilisé pour la flux vidéo.
+5. Sur la machine source, de retour dans vlc, cliquer sur le bouton **Stream**.
+6. S'assurer que la fonction de répétition (la boucle) soit en bleu.
+7. Attendre quelques secondes et arrêter la capture sur la machine moniteur.
+8. Ouvrir l'un des paquets vidéo reçus et comparer l'adresse MAC multicast calculé avec l'adresse MAC de destination du paquet.\
 Que pouvez-vous en conclure avec cette capture ?\
 *La machine reçoit les paquets sans être abonnée*
 
 ## Étape 3 - Lecture du flux vidéo
 1. Sur la machine qui servira de moniteur, ouvrir VLC.
-2. Dans la barre de menu, cliquer sur **Media** puis sur **Open Network Stream**.\
-![vlc_etape2_2](./img/p1.0_vlc_pic12.png)
-3. Entrer l'URL de la video. Celui-ci devrait être composé du type de transport, de l'adresse source et du port. \
-Dans notre cas, l'adresse source est l'adresse IP de l'interface de la machine moniteur.\
-ex : *rtp://10.179.11.101:5004*\
-**Ne pas encore cliquer sur *PLAY* !**\
-![alt text](./img/p1.0_vlc_pic18.png)\
+2. Dans la barre de menu, cliquer sur **Media** puis sur **Open Network Stream**.
+3. Entrer l'URL de la video. Celui-ci devrait être composé du type de transport, de l'adresse multicast et du port. \
+ex : *rtp://239.86.0.1:5004*\
+**Ne pas encore cliquer sur *PLAY* !**
+
 4. Retourner dans Wireshark et lancer une nouvelle capture.\
 ![alt text](./img/p1.0_ws_pic3.png)
 5. Dans vlc, cliquer sur le bouton **Play**.\
