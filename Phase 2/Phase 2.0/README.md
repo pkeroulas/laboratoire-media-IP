@@ -1,4 +1,4 @@
-# Phase 2.0 - VLC à VLC (RTP sans IGMP SnoopSnoop)
+# Phase 2.0 - VLC à VLC (RTP sans IGMP Snooping)
 ![Topologie phase 2.0](./img/Phase_2_S2.0_topologie.png)
 
 ## Prérequis
@@ -45,20 +45,15 @@ Que pouvez-vous en conclure avec cette capture ?\
 ex : *rtp://239.86.0.1:5004*\
 **Ne pas encore cliquer sur *PLAY* !**
 
-4. Retourner dans Wireshark et lancer une nouvelle capture.\
-![alt text](./img/p1.0_ws_pic3.png)
-5. Dans vlc, cliquer sur le bouton **Play**.\
-![alt text](./img/p1.0_vlc_pic19.png)
+4. Retourner dans Wireshark et lancer une nouvelle capture.
+5. Dans vlc, cliquer sur le bouton **Play**.
 6. Arrêter la capture Wireshark. Que pouvez-vous en conclure ?\
 *Laisser le flux vidéo fonctionner*
 
 ## Étape 4 - Analyse des débits
-1. Sur la machine moniteur, ouvrir un gestionnaire de tâches. Ouvrir l'onglet *Performance* et sélectionner l'interface utilisée pour le flux vidéo.\
-***Noter la bande passante utilisée (approximative)***
-![alt text](./img/p1.0_tmgr_pic1.png)
-2. Sur la machine source, ouvrir un gestionnaire de tâches et ouvrir l'interface utilisée pour le flux vidéo.\
-***Noter la bande passante utilisée (approximative)***
-![alt text](./img/p1.0_tmgr_pic2.png)\
+1. Sur le commutateur (switch) utilisé dans votre réseau, aller observer le débit utilisé par le port de la source et le port du premier moniteur.
+2. Sur le 2e moniteur, démarrer la lecture du flux vidéo.
+3. De retour sur le commutateur, prendre en note les débits des ports sources, moniteur 1, moniteur 2 ainsi qu'un autre port quelconque.\
 Que pouvez-vous conclure avec vos résultats ?\
 *Vous pouvez fermer le flux vidéo à ce point. \
 Toutefois, il peut être intéressant de laisser jouer le flux vidéo un certain temps afin de valider la robustesse de la configuration actuelle.*
