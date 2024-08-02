@@ -62,3 +62,7 @@ Toutefois, il peut être intéressant de laisser jouer le flux vidéo un certain
 1. Effectuer un résumé de l'exercice ainsi qu'une courte explication de la situation.\
 Spécifiez les protocoles, bandes passantes et autres informations nécessaires afin qu'un autre étudiant puisse comprendre la situation rapidement sans aucune information antérieure.
 2. Si vous avez eu des problèmes, apporter des théories potentielles sur la cause / les causes du / des problèmes, les impacts observés ainsi que des potentiels moyens de résolution.
+
+## Liens utiles
+[Convertir une adresse IP multicast en adresse MAC multicast - Lien 1](https://networklessons.com/multicast/multicast-ip-address-to-mac-address-mapping)
+[Convertir une adresse IP multicast en adresse MAC multicast - Lien 2](https://www.dqnetworks.ie/toolsinfo.d/multicastaddressing.html)
