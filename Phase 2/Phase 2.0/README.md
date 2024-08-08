@@ -33,10 +33,10 @@ Ensuite, cliquer sur le bouton **Next**.
 4. Sur la machine qui sert de 2e moniteur, ouvrir Wireshark et sélectionner l'interface qui est connectée au réseau utilisé pour la flux vidéo.
 5. Sur la machine source, de retour dans vlc, cliquer sur le bouton **Stream**.
 6. S'assurer que la fonction de répétition (la boucle) soit en bleu.
-7. Attendre quelques secondes et arrêter la capture sur la machine moniteur.
-8. Ouvrir l'un des paquets vidéo reçus et comparer l'adresse MAC multicast calculé avec l'adresse MAC de destination du paquet.\
+7. Attendre quelques secondes et arrêter la capture sur la machine moniteur.\
 Que pouvez-vous en conclure avec cette capture ?\
 *La machine reçoit les paquets sans être abonnée*
+8. Ouvrir l'un des paquets vidéo reçus et comparer l'adresse MAC multicast calculé avec l'adresse MAC de destination du paquet.
 
 ## Étape 3 - Lecture du flux vidéo
 1. Sur la machine qui servira de moniteur, ouvrir VLC.
@@ -44,7 +44,6 @@ Que pouvez-vous en conclure avec cette capture ?\
 3. Entrer l'URL de la video. Celui-ci devrait être composé du type de transport, de l'adresse multicast et du port. \
 ex : *rtp://239.86.0.1:5004*\
 **Ne pas encore cliquer sur *PLAY* !**
-
 4. Retourner dans Wireshark et lancer une nouvelle capture.
 5. Dans vlc, cliquer sur le bouton **Play**.
 6. Arrêter la capture Wireshark. Que pouvez-vous en conclure ?\
@@ -64,5 +63,5 @@ Spécifiez les protocoles, bandes passantes et autres informations nécessaires 
 2. Si vous avez eu des problèmes, apporter des théories potentielles sur la cause / les causes du / des problèmes, les impacts observés ainsi que des potentiels moyens de résolution.
 
 ## Liens utiles
-[Convertir une adresse IP multicast en adresse MAC multicast - Lien 1](https://networklessons.com/multicast/multicast-ip-address-to-mac-address-mapping)
-[Convertir une adresse IP multicast en adresse MAC multicast - Lien 2](https://www.dqnetworks.ie/toolsinfo.d/multicastaddressing.html)
+- [Convertir une adresse IP multicast en adresse MAC multicast - Lien 1](https://networklessons.com/multicast/multicast-ip-address-to-mac-address-mapping)
+- [Convertir une adresse IP multicast en adresse MAC multicast - Lien 2](https://www.dqnetworks.ie/toolsinfo.d/multicastaddressing.html)

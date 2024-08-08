@@ -10,6 +10,7 @@
 - Connaissances de base sur le concept du [RTP](https://en.wikipedia.org/wiki/Real-time_Transport_Protocol)
 - Connaissances de base sur le concept du [Multicast](https://fr.wikipedia.org/wiki/Multicast)
 - Connaissances du binaire, de l'hexadécimal et des conversions
+- Connaissances de base sur l'[IGMP](https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst3850/software/release/37e/multicast/configuration_guide/b_mc_37e_3850_cg/b_mc_3e_3850_cg_chapter_0100.pdf)
 
 ## Étape 0 - Configuration du commutateur
 1. Se connecter au commutateur et activer la fonction **IGMP Snooping** pour votre réseau.
@@ -34,3 +35,26 @@
 1. Sur la machine qui servira de premier moniteur, ouvrir un terminal.
 2. Démarrer la lecture du flux vidéo avec la commande ffmpeg suivante : `ffplay -i rtp://[IP_Multicast]:[Port]`
     - *ex : `ffplay -i rtp://239.89.0.1:5004`*
+3. Observer les captures Wireshark sur le premier et le deuxième moniteur.\
+*Quelles sont les différences observées par rapport au [précédent exercice](../Phase%202.0/README.md) ?*\
+*La machine moniteur 2 ne reçoit pas les paquets sans être abonnée*
+
+4. Arrêter la capture Wireshark sur le premier moniteur.\
+**-> Insérer un truc pour filtrer l'interface GUI pour les paquets IGMP <-**
+4. Sur le commutateur, observer les abonnements au flux vidéo multicast.
+5. Dans vlc, cliquer sur le bouton **Play**.
+6. Arrêter la capture Wireshark. Que pouvez-vous en conclure ?\
+*Laisser le flux vidéo fonctionner*
+
+## Étape 4 - Analyse des débits
+1. Sur le commutateur (switch) utilisé dans votre réseau, aller observer le débit utilisé par le port de la source et le port du premier moniteur.
+2. Sur le 2e moniteur, démarrer la lecture du flux vidéo.
+3. De retour sur le commutateur, prendre en note les débits des ports sources, moniteur 1, moniteur 2 ainsi qu'un autre port quelconque.\
+Que pouvez-vous conclure avec vos résultats ?\
+*Vous pouvez fermer le flux vidéo à ce point. \
+Toutefois, il peut être intéressant de laisser jouer le flux vidéo un certain temps afin de valider la robustesse de la configuration actuelle.*
+
+## Étape 5 - Retour sur l'exercice
+1. Effectuer un résumé de l'exercice ainsi qu'une courte explication de la situation.\
+Spécifiez les protocoles, bandes passantes et autres informations nécessaires afin qu'un autre étudiant puisse comprendre la situation rapidement sans aucune information antérieure.
+2. Si vous avez eu des problèmes, apporter des théories potentielles sur la cause / les causes du / des problèmes, les impacts observés ainsi que des potentiels moyens de résolution.
