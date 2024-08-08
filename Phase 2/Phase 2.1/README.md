@@ -14,7 +14,12 @@
 
 ## Étape 0 - Configuration du commutateur
 1. Se connecter au commutateur et activer la fonction **IGMP Snooping** pour votre réseau.
-
+    - Exemple sur un commutateur Arista.
+    ```
+    ip igmp snooping querier version [IGMP_Version_Number (2 or 3)]
+    ip igmp snooping vlan [Vlan_Number] querier
+    ip igmp snooping vlan [Vlan_Number] querier address [Querrier_IP]
+    ```
 ## Étape 1 - Configuration de l'émetteur (Mux)
 1. Sur la machine qui servira d'émetteur, ouvrir un terminal.
 2. Lancer le flux vidéo avec ffmpeg avec la commande suivante : `ffmpeg -re -stream_loop -1 -i [Path/to/file.mp4] -c copy -f rtp rtp://[IP_Multicast]:[Port]`
