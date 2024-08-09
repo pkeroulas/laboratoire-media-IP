@@ -37,11 +37,13 @@
 ## Étape 4 - Analyse de la capture
 1. Dans la capture Wireshark, appliquer le filtre `rtsp or rtcp`.
 2. Observer l'échange RTSP.
-    - *Quelles sont les étapes de l'échange et quelles sont les informations échangées ?*
+    - ❓ Quelles sont les étapes de l'échange et quelles sont les informations échangées ?
 3. Dans l'échange RTSP, sélectionner le paquet incluant le SDP.
 4. Dans le paquet sous la section *Real Time Streaming Protocol*, observer les informations du SDP.
     - *Pour une vue plus claire, copier le SDP en tant que texte imprimable et coller dans un bloc-note.*
 5. Identifier les composantes du SDP en détails.
+
+TODO: Montrer le SDP et essaye de recouper les info media avec autre chose
 
 ## Étape 5 - Retour sur l'exercice
 1. Effectuer un résumé de l'exercice ainsi qu'une courte explication de la situation.\

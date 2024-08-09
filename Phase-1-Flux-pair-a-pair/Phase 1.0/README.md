@@ -1,7 +1,10 @@
-# Phase 1.0 - VLC à VLC (RTP)
+Phase 1.0 - VLC à VLC (RTP)
+---------------------------
+
 ![alt text](./img/Phase_1_S1.0_topologie.png)
 
-## Prérequis
+# Prérequis
+
 - Un fichier vidéo en provenance du [Netflix Open Content](https://opencontent.netflix.com/)
     - ex : *Meridian_UHD4k5994_HDR_P3PQ.mp4*
 - Deux ordinateurs avec VLC (Windows ou Linux)
@@ -9,7 +12,8 @@
 - Les adresses IP des deux ordinateurs
 - Connaissances de base sur le concept du [RTP](https://en.wikipedia.org/wiki/Real-time_Transport_Protocol)
 
-## Étape 1 - Configuration de l'émetteur (Mux)
+# Étape 1 - Configuration de l'émetteur (Mux)
+
 1. Sur la machine qui servira d'émetteur, ouvrir VLC
 2. Dans la barre de menu, cliquer sur **Media** puis sur **Stream**.\
 ![vlc_etape1_2](./img/p1.0_vlc_pic2.png)
@@ -32,7 +36,8 @@ Ensuite, cliquer sur le bouton **Next**.\
 ![vlc_etape1_9](./img/p1.0_vlc_pic9.png)\
 **Ne pas** encore cliquer sur le bouton **Stream**
 
-## Étape 2 - Capture des paquets et lecture du flux vidéo
+# Étape 2 - Capture des paquets et lecture du flux vidéo
+
 1. Sur la machine qui sert de moniteur, ouvrir Wireshark et sélectionner l'interface par laquelle le flux vidéo sera reçu en double-cliquant dessus.\
 ![vlc_etape3_4](./img/p1.0_vlc_pic14.png)
 2. Sur la machine source, de retour dans vlc, cliquer sur le bouton **Stream**.\
@@ -41,10 +46,12 @@ Ensuite, cliquer sur le bouton **Next**.\
 ![vlc_etape1_11](./img/p1.0_vlc_pic11.png)
 4. Attendre quelques secondes et arrêter la capture sur la machine moniteur.\
 ![vlc_etape3_6](./img/p1.0_vlc_pic17.png)\
-Que pouvez-vous en conclure avec cette capture ?\
-*La machine reçoit les paquets sans être abonnée*
 
-## Étape 3 - Lecture du flux vidéo
+❓Que pouvez-vous en conclure avec cette capture ?\
+*💡La machine reçoit les paquets sans n'avoir rien demandé.*
+
+# Étape 3 - Lecture du flux vidéo
+
 1. Sur la machine qui servira de moniteur, ouvrir VLC.
 2. Dans la barre de menu, cliquer sur **Media** puis sur **Open Network Stream**.\
 ![vlc_etape2_2](./img/p1.0_vlc_pic12.png)
@@ -60,18 +67,23 @@ ex : *rtp://10.179.11.101:5004*\
 6. Arrêter la capture Wireshark. Que pouvez-vous en conclure ?\
 *Laisser le flux vidéo fonctionner*
 
-## Étape 4 - Analyse des débits
+# Étape 4 - Analyse des débits
+
 1. Sur la machine moniteur, ouvrir un gestionnaire de tâches. Ouvrir l'onglet *Performance* et sélectionner l'interface utilisée pour le flux vidéo.\
 ***Noter la bande passante utilisée (approximative)***
 ![alt text](./img/p1.0_tmgr_pic1.png)
 2. Sur la machine source, ouvrir un gestionnaire de tâches et ouvrir l'interface utilisée pour le flux vidéo.\
 ***Noter la bande passante utilisée (approximative)***
 ![alt text](./img/p1.0_tmgr_pic2.png)\
-Que pouvez-vous conclure avec vos résultats ?\
+
+❓Que pouvez-vous conclure avec vos résultats ?\
+*💡Intuitif: le débit est similaire à la sortie de la source et à l'entrée du monituer*
+
 *Vous pouvez fermer le flux vidéo à ce point. \
 Toutefois, il peut être intéressant de laisser jouer le flux vidéo un certain temps afin de valider la robustesse de la configuration actuelle.*
 
-## Étape 5 - Retour sur l'exercice
+# Étape 5 - Retour sur l'exercice
+
 1. Effectuer un résumé de l'exercice ainsi qu'une courte explication de la situation.\
 Spécifiez les protocoles, bandes passantes et autres informations nécessaires afin qu'un autre étudiant puisse comprendre la situation rapidement sans aucune information antérieure.
 2. Si vous avez eu des problèmes, apporter des théories potentielles sur la cause / les causes du / des problèmes, les impacts observés ainsi que des potentiels moyens de résolution.
