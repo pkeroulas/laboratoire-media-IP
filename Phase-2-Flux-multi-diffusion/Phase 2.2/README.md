@@ -2,7 +2,11 @@
 
 ## EXERCICE AVEC SCRIPT ROGUE
 
+## Je crois que l'analyse des headers RTP ICI aurait beaucoup de logique car il s'agit un peu d'une étape de troubleshooting.
+
 ## TOUT CE QUI SUIT EST JUSTE UNE COPIE DE 2.1, AUCUN CHANGEMENT
+
+
 
 ## Prérequis
 - Un fichier vidéo en provenance du [Netflix Open Content](https://opencontent.netflix.com/)
