@@ -1,26 +1,24 @@
-# Phase 2 - Multicast
+Phase 2 - Flux multi-diffusion
+------------------------------
 
-[WIP]
--> Concept des routes à ajouter afin de faire fonctionner les flux si plus d'une interface réseau
+Maintenant que les bases de la transmission pair-à-pair sont établies grâce à l'unicast + UDP,
+exploitons le potentiel des adresses multicast pour complexifier la topology de notre réseau de
+production.  
 
-### Windows
-- Ouvrir un terminal en administrateur
-- >route add dest_net_@ MASK mask@ gtw_@
-    - *ex: route add 232.0.0.0 MASK 255.0.0.0 10.179.11.254*
 
-### Linux
-- Dans un terminal
-- >sudo ip r add *dest_@* dev *net_int*
-    - *ex: sudo ip r add 239.192.0.21 dev ens4f1*
+# Test de transmission multicast
 
-## Phase 2.0 - VLC à VLC (RTP)
+Reprenons les mêmes outils que dans la 1ère phase mais remplaçons simplemenet l'adresse unicast par
+une addresse multicast. Et tentons de déterminer le chemin du flux en mesurant à la fois aux niveaux du reseau que des terminaux. [Exercice 2.0](./Phase%202.0/README.md) 
 
-## Phase 2.1 - FFmpeg à FFmpeg (RTP)
+Après avoir constater que le traffic `flood` partout, on imagine les effets indésirables causés par ce bruit qui se repend partout. Tentons d'y palier en activant le Protocol de Gestion de Group (IGMP).
+[Exercice 2.1](./Phase%202.1/README.md)
 
-## Phase 2.2 - FFmpeg à FFmpeg + Intrus (RTP)
 
-## Phase 2.3 - RTSP Multicast
+# Phase 2.3 - RTSP Multicast
+
+ TODO: à compléter
+
 - http://trac.ffmpeg.org/wiki/StreamingGuide
 - https://ffmpeg.org/ffmpeg-all.html#rtsp 
 - https://www.peaknx.com/pub/media/peaknx/downloads/documents/quickstarts/Media_MTX_Quickstart.pdf
-
