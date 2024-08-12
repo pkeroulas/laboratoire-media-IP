@@ -49,11 +49,14 @@
 *Laisser le flux vidéo fonctionner*
 
 ## Étape 4 - Analyse des débits
-1. Sur le commutateur (switch) utilisé dans votre réseau, aller observer le débit utilisé par le port de la source et le port du premier moniteur.\
+1. Sur le commutateur (switch) utilisé dans votre réseau, aller observer le débit utilisé par le port de la source et le port du premier moniteur.
     - ex: `watch show interface ethernet 4, ethernet 46`
 2. Sur le 2e moniteur, démarrer la lecture du flux vidéo.
 3. De retour sur le commutateur, prendre en note les débits des ports sources, moniteur 1, moniteur 2 ainsi qu'un autre port quelconque.\
-Que pouvez-vous conclure avec vos résultats ?\
+Que pouvez-vous conclure avec vos résultats ?
+4. Sur le commutateur, afficher les membres du multicast\
+    - ex: `show igmp snooping querrier membership`
+5. Fermer le flux vidéo
 *Vous pouvez fermer le flux vidéo à ce point. \
 Toutefois, il peut être intéressant de laisser jouer le flux vidéo un certain temps afin de valider la robustesse de la configuration actuelle.*
 
