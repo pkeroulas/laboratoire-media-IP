@@ -31,7 +31,7 @@ Phase 2.0 - Test initial de transmission multicast
 
 1. Calculer l'adresse MAC multicast associée à l'adresse IP multicast `239.86.0.1` grâce à [cet outil en ligne](https://networklessons.com/multicast/multicast-ip-address-to-mac-address-mapping)
 2. Valider cette MAC avec celle observer dans Wireshark
-3. Calculer l'adresse MAC multicast associée à l'adresse IP multicast de TODO
+3. Calculer l'adresse MAC multicast associée à l'adresse IP multicast de `239.217.0.1`
 4. Essayer d'anticiper les problèmes potentiels
 *💡 Ce risque de conflit d'adresse peut engendrer des problème de routage dans un communtateur L2.*
 
