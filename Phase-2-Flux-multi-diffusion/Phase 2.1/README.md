@@ -31,28 +31,26 @@
 
 ## Étape 2 - Capture des paquets et lecture du flux vidéo
 1. En fonction de votre adresse IP multicast, calculer l'adresse MAC multicast associée et en prendre note..
-2. Calculer l'adresse MAC de l'adresse IP multicast **239.127.0.1** et en prendre note.
-    - *Comparer l'adresse MAC calculée avec celle calculée à l'étape 2 dans [l'exercice précédent.](../Phase%202.0/README.md)*
-3. Sur la machine qui sert de moniteur, ouvrir Wireshark et sélectionner l'interface par laquelle le flux vidéo sera reçu en double-cliquant dessus.
-4. Sur la machine qui sert de 2e moniteur, ouvrir Wireshark et sélectionner l'interface qui est connectée au réseau utilisé pour la flux vidéo.
+2. Sur la machine qui sert de moniteur, ouvrir Wireshark et sélectionner l'interface par laquelle le flux vidéo sera reçu.
+3. Sur la machine qui sert de 2e moniteur, ouvrir Wireshark et sélectionner l'interface qui est connectée au réseau utilisé pour le flux vidéo.
 
 ## Étape 3 - Lecture du flux vidéo
-1. Sur la machine qui servira de premier moniteur, ouvrir un terminal.
+1. Sur la machine qui sert de premier moniteur, ouvrir un terminal.
 2. Démarrer la lecture du flux vidéo avec la commande ffmpeg suivante : `ffplay -i rtp://[IP_Multicast]:[Port]`
     - *ex : `ffplay -i rtp://239.89.0.1:5004`*
 3. Observer les captures Wireshark sur le premier et le deuxième moniteur.\
 *Quelles sont les différences observées par rapport au [précédent exercice](../Phase%202.0/README.md) ?*\
 *La machine moniteur 2 ne reçoit pas les paquets sans être abonnée*
-
 4. Arrêter la capture Wireshark sur le premier moniteur.\
 **-> Insérer un truc pour filtrer l'interface GUI pour les paquets IGMP <-**
-4. Sur le commutateur, observer les abonnements au flux vidéo multicast.
-5. Dans vlc, cliquer sur le bouton **Play**.
-6. Arrêter la capture Wireshark. Que pouvez-vous en conclure ?\
+5. Sur le commutateur, observer les abonnements au flux vidéo multicast.
+6. Dans vlc, cliquer sur le bouton **Play**.
+7. Arrêter la capture Wireshark. Que pouvez-vous en conclure ?\
 *Laisser le flux vidéo fonctionner*
 
 ## Étape 4 - Analyse des débits
-1. Sur le commutateur (switch) utilisé dans votre réseau, aller observer le débit utilisé par le port de la source et le port du premier moniteur.
+1. Sur le commutateur (switch) utilisé dans votre réseau, aller observer le débit utilisé par le port de la source et le port du premier moniteur.\
+    - ex: `watch show interface ethernet 4, ethernet 46`
 2. Sur le 2e moniteur, démarrer la lecture du flux vidéo.
 3. De retour sur le commutateur, prendre en note les débits des ports sources, moniteur 1, moniteur 2 ainsi qu'un autre port quelconque.\
 Que pouvez-vous conclure avec vos résultats ?\
