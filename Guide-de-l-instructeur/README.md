@@ -9,8 +9,8 @@ Guide de l'instructeur
 * Fonctionnalités:
     * IGMP snooping
     * IGMPv3
-    * lldp
-    * serveur DHCP (suggéré, mais optionnel)
+    * LLDP
+    * Serveur DHCP (suggéré, mais optionnel)
 
 # PC Moniteur 
 
