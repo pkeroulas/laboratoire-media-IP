@@ -1,0 +1,130 @@
+! Command: show running-config
+! device: MTL-LAB1S3-CEGEP-A7060 (DCS-7060SX2-48YC6, EOS-4.28.1F)
+!
+! boot system flash:/EOS-4.28.1F.swi
+!
+no aaa root
+.
+.
+.
+.
+dhcp server
+   subnet 10.179.11.0/24
+      range 10.179.11.100 10.179.11.200
+      name Subnet_Groupe_1
+      dns server 10.179.11.254
+      default-gateway 10.179.11.254
+   subnet 10.179.12.0/24
+      range 10.179.12.100 10.179.12.200
+      name Subnet_Groupe_2
+      dns server 10.179.12.254
+      default-gateway 10.179.12.254
+   .
+   .
+   .
+   .
+   subnet 10.179.XX.0/24
+      range 10.179.XX.100 10.179.XX.200
+      name Subnet_Groupe_2
+      dns server 10.179.12.254
+      default-gateway 10.179.12.254
+!
+ip igmp snooping vlan 10 querier
+ip igmp snooping vlan 11 querier
+.
+.
+.
+.
+ip igmp snooping vlan x querier
+ip igmp snooping vlan 10 querier address 10.179.11.253
+ip igmp snooping vlan 11 querier address 10.179.12.253
+.
+.
+.
+.
+ip igmp snooping vlan x querier address 10.179.XX.253
+ip igmp snooping querier version 3
+.
+.
+.
+.
+vlan 10
+   name Vlan_Groupe_1
+!
+vlan 11
+   name Vlan_Groupe_2
+!
+.
+.
+.
+.
+vlan x
+   name Vlan_Groupe_m
+!
+banner login
+   ____                                 ____ ____   ____
+  / ___|___  __ _  ___ _ __      _     / ___| __ ) / ___|
+ | |   / _ \/ _` |/ _ \ '_ \   _| |_  | |   |  _ \| |
+ | |__|  __/ (_| |  __/ |_) | |_   _| | |___| |_) | |___
+  \____\___|\__, |\___| .__/    |_|    \____|____/ \____|
+            |___/     |_|
+EOF
+!
+interface Ethernet1
+   description Port 1 Groupe 1
+   switchport access vlan 10
+!
+interface Ethernet2
+   description Port 2 Groupe 1
+   switchport access vlan 10
+!
+interface Ethernet3
+   description Port 3 Groupe 1
+   switchport access vlan 10
+!
+interface Ethernet4
+   description Port 4 Groupe 1
+   switchport access vlan 10
+!
+interface Ethernet5
+   description Port 1 Groupe 2
+   switchport access vlan 11
+!
+interface Ethernet6
+   description Port 2 Groupe 2
+   switchport access vlan 11
+!
+interface Ethernet7
+   description Port 3 Groupe 2
+   switchport access vlan 11
+!
+interface Ethernet8
+   description Port 4 Groupe 2
+   switchport access vlan 11
+.
+.
+.
+.
+interface Ethernet48
+   description Port [n] Groupe [m]
+   switchport access vlan [x]
+!
+interface Vlan10
+   ip address 10.179.11.254/24
+   dhcp server ipv4
+!
+interface Vlan11
+   ip address 10.179.12.254/24
+   dhcp server ipv4
+.
+.
+.
+.
+interface VlanX
+   ip address 10.179.XX.254/24
+   dhcp server ipv4
+.
+.
+.
+.
+end
