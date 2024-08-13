@@ -72,11 +72,11 @@ sudo obs
 # Échantillon videos
 
 Télécharger un fichier qui servir à générer des flux. Exemple fourni par Netflix: [Netflix Open Content](https://opencontent.netflix.com/)
-    - ex : *Meridian_UHD4k5994_HDR_P3PQ.mp4*
+- ex : *Meridian_UHD4k5994_HDR_P3PQ.mp4*
 
 # Media MTX
 
-TODO: documenter l'installation: https://github.com/bluenviron/mediamtx/releases
+Télécharger la version de MediaMTX pour le type de système d'exploitation (Linux ou Windows) sur le [repo Git](https://github.com/bluenviron/mediamtx/releases) et l'exécuter. Il faut s'assurer que le pare-feu soit configurer pour autoriser les communications du programme, principalement sur Windows.
 
 # Liens Utiles
 
