@@ -4,8 +4,14 @@
 
 ## Je crois que l'analyse des headers RTP ICI aurait beaucoup de logique car il s'agit un peu d'une étape de troubleshooting.
 
-## TOUT CE QUI SUIT EST JUSTE UNE COPIE DE 2.1, AUCUN CHANGEMENT
+## Après le script rogue, insérer la fonction de SSM
+[SSM sur ffplay](https://trac.ffmpeg.org/ticket/7459) ressemble à ceci : 
+```powershell
+ffplay -i rtp://@239.89.0.1:5004?sources=10.179.11.101
+```
 
+
+## TOUT CE QUI SUIT EST JUSTE UNE VIEILLE COPIE DE 2.1, AUCUN CHANGEMENT
 
 
 ## Prérequis
