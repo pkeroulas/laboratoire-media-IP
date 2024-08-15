@@ -29,10 +29,12 @@ Phase 1.0 - VLC à VLC (RTP)
 Ensuite, cliquer sur le bouton **Add**.\
 ![vlc_etape1_7](./img/p1.0_vlc_pic7.png)
 8. Dans la zone *Address*, entrer l'adresse IP de la machine qui servira de moniteur.\
-Donner un nom à votre flux vidéo (sans espaces idéalement).\
-Ensuite, cliquer sur le bouton **Next**.\
+❓Que pouvez-vous en conclure avec cette capture ?\
+*💡ex : *10.179.11.101*
+9. Donner un nom à votre flux vidéo (sans espaces idéalement) et cliquer sur le bouton **Next**.\
+TODO: ajouter l'IP
 ![vlc_etape1_8](./img/p1.0_vlc_pic8.png)
-9. Cocher la case pour *Activate Transcoding* puis cliquer sur le bouton **Next**.\
+10. Cocher la case pour *Activate Transcoding* puis cliquer sur le bouton **Next**.\
 ![vlc_etape1_9](./img/p1.0_vlc_pic9.png)\
 **Ne pas** encore cliquer sur le bouton **Stream**
 

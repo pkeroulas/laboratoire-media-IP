@@ -12,6 +12,11 @@ Guide de l'instructeur
     * LLDP
     * Serveur DHCP (suggéré, mais optionnel)
 
+# IPAM
+
+Dans le cas où les étudiants se partegeraient un réseaux de transport de média partagé.
+Il faudra établir une table d'attribution d'adresses multicast pour éviter les conflits.
+
 # PC Moniteur 
 
 Voire le [VLC media player](https://www.videolan.org/vlc/) et [FFmpeg](https://ffmpeg.org/)
