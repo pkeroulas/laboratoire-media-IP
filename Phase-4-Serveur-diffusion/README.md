@@ -1,4 +1,9 @@
+Survol du fonctionnement global
+---------------------------------
+![Fonctionnement Global](./Lab%20Cegep%20Sher%20Topologie%20Phase%204.jpg)
+
 Liens Utiles
+---------------------------------
 - [FFmpeg VAAPI AMD](https://trac.ffmpeg.org/wiki/Hardware/VAAPI)
 - [nvtop (monitor gpu)](https://www.cyberciti.biz/hardware/nvtop-command-in-linux-to-monitor-nvidia-amd-intel-gpus/)
 - [Lien pour stream obs to mediamtx (rtmp but add port num)](https://github.com/bluenviron/mediamtx?tab=readme-ov-file#obs-studio)
