@@ -9,7 +9,7 @@ L'ensemble des exercices suivants consite générer et visualiser un flux transm
 
 [TODO]Schéma chaine simple
 
-# Protocol RTP
+# Protocole RTP
 
 [Real-time Transport Protocol](https://en.wikipedia.org/wiki/Real-time_Transport_Protocol) est le
 moyen de transport média le plus simple.
@@ -27,7 +27,7 @@ celui-ci est moins connus du grand public que `VLC` mais est très utilisé par 
 web. Et soyons curieux en expérimentant l'ajout une seconde source vidéo.
 [Exercice 1.1](./Phase-1.1/README.md)
 
-# Protocol RTSP
+# Protocole RTSP
 
 [Real-Time Streaming Protocol](https://en.wikipedia.org/wiki/Real-Time_Streaming_Protocol) repose
 sur `RTP` mais introduit un mécanisme de contrôle de flux.
