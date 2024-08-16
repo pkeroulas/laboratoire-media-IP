@@ -79,7 +79,7 @@ ex : *rtp://10.179.11.101:5004*\
 ![alt text](./img/p1.0_tmgr_pic2.png)\
 
 ❓Que pouvez-vous conclure avec vos résultats ?\
-*💡Intuitif: le débit est similaire à la sortie de la source et à l'entrée du monituer*
+*💡Intuitif: le débit est similaire à la sortie de la source et à l'entrée du moniteur*
 
 *Vous pouvez fermer le flux vidéo à ce point. \
 Toutefois, il peut être intéressant de laisser jouer le flux vidéo un certain temps afin de valider la robustesse de la configuration actuelle.*
