@@ -10,7 +10,7 @@ et commun afin de permettre une communication claire, efficace et standardisée.
 
 [En construction]
 
-# Survol des termes problèmes vidéos possibles et des termes techniques assocçiés
+# Survol des problèmes vidéos possibles et des termes techniques assocçiés
 
 [En construction -> Demander des suggestions à P-H R.]
 
