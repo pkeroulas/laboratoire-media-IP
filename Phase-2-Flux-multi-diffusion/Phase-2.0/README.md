@@ -9,7 +9,7 @@ Phase 2.0 - Test initial de transmission multicast
     - *💡 ex : Meridian_UHD4k5994_HDR_P3PQ.mp4*
 - Trois ordinateurs avec VLC (Windows ou Linux)
 - Une connexion réseau entre les deux ordinateurs
-- Les adresses IP des deux ordinateurs
+- Les adresses IP des trois ordinateurs
 - Connaissances de base sur le concept du [RTP](https://en.wikipedia.org/wiki/Real-time_Transport_Protocol)
 - Connaissances de base sur le concept du [Multicast](https://fr.wikipedia.org/wiki/Multicast)
 - Connaissances du binaire, de l'hexadécimal et des conversions
