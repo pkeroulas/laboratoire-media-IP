@@ -12,7 +12,7 @@ et commun afin de permettre une communication claire, efficace et standardisée.
 
 # Survol des termes problèmes vidéos possibles et des termes techniques assocçiés
 
-[En construction]
+[En construction -> Demander des suggestions à P-H R.]
 
 # Test de transcodage d'un fichier avec VLC et FFmpeg
 
