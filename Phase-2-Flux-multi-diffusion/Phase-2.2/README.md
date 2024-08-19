@@ -4,6 +4,8 @@
 
 ## Je crois que l'analyse des headers RTP ICI aurait beaucoup de logique car il s'agit un peu d'une étape de troubleshooting.
 
+-> TODO : Analyse d'un Header RTP.
+
 ## Après le script rogue, insérer la fonction de SSM
 [SSM sur ffplay](https://trac.ffmpeg.org/ticket/7459) ressemble à ceci : 
 ```powershell
@@ -20,6 +22,7 @@ ffplay -i rtp://@239.89.0.1:5004?sources=10.179.11.101
 - Trois ordinateurs avec VLC (Windows ou Linux)
 - Une connexion réseau entre les deux ordinateurs
 - Les adresses IP des trois ordinateurs
+- Le script mistère sur une machine linux.
 - Connaissances de base sur le concept du [RTP](https://en.wikipedia.org/wiki/Real-time_Transport_Protocol)
 - Connaissances de base sur le concept du [Multicast](https://fr.wikipedia.org/wiki/Multicast)
 - Connaissances du binaire, de l'hexadécimal et des conversions
