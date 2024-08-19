@@ -6,7 +6,7 @@ les concepts de transcodage, de compression et le langage technique associé. L'
 compréhension des causes et impacts de plusieurs problèmes vidéos en plus d'établir un langage technique préçis
 et commun afin de permettre une communication claire, efficace et standardisée. Les notions de transcodage 
 
-# Survol des paramètres d'un fichier vidéo et observations avec MediaInfo
+# Survol des paramètres d'un fichier vidéo et observations avec MediaInfo et FFprobe
 
 [En construction]
 
