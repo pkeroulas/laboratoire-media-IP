@@ -57,6 +57,7 @@ Réseaux:
 
 Média:
 
+* __Fichier__ vs __Flux__
 * __Protocoles__ de transport: retrouver les données média dans les paquets IP
 * __Formats__ audio, vidéo, meta-données
 * __Contraintes__: trouver l'équilibre entre qualité du signal, bande passante et délai
@@ -99,10 +100,10 @@ dans un format adapté au transport sur Internet.
 
 # Déroulement
 
-1. Préparation et branchement du matériel: une source (caméra) + un canal (réseau) + une destination (moniteur)
-2. Configuration d’une chaîne média simple
-3. Insertion d'un équipement inconnu
-4. Utilisation d’un mixeur et ajout de nouvelles sources 
-5. Formatage du flux de sortie
+0. Préparation et branchement du matériel: une source (caméra) + un canal (réseau) + une destination (moniteur)
+1. [Configuration d’une chaîne média simple pair à pair](./Phase-1-Flux-pair-a-pair/README.md)
+2. [Adaptation pour la multi-diffusion](./Phase-2-Flux-multi-diffusion/README.md)
+3. [Compression du signal pour la distribution.](./Phase-3-Compression/README.md)
+4. [Bâtir un mini studio.](./Phase-4-Serveur-diffusion/README.md)
 
-[C'est parti!](./laboratoire.md)🚀
+🚀
