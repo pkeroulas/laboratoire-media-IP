@@ -1,11 +1,11 @@
 # Phase 2.2 - Résolution de problème
 
-## EXERCICE AVEC SCRIPT ROGUE
+EXERCICE AVEC SCRIPT ROGUE
 
-## Je crois que l'analyse des headers RTP ICI aurait beaucoup de logique car il s'agit un peu d'une étape de troubleshooting.
+Je crois que l'analyse des headers RTP ICI aurait beaucoup de logique car il s'agit un peu d'une étape de troubleshooting.
 
--> TODO : Analyse d'un Header RTP.
--> TODO : Script pour multicast Intrus 
+- TODO : Analyse d'un Header RTP.
+- TODO : Script pour multicast Intrus 
 
 ## Après le script rogue, insérer la fonction de SSM
 [SSM sur ffplay](https://trac.ffmpeg.org/ticket/7459) ressemble à ceci : 
