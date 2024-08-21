@@ -10,6 +10,7 @@ Phase 2.0 - Test initial de transmission multicast
 - Trois ordinateurs avec VLC (Windows ou Linux)
 - Une connexion réseau entre les deux ordinateurs
 - Les adresses IP des trois ordinateurs
+- Une adresse IP multicast (déterminée par l'enseignant)
 - Connaissances de base sur le concept du [RTP](https://en.wikipedia.org/wiki/Real-time_Transport_Protocol)
 - Connaissances de base sur le concept du [Multicast](https://fr.wikipedia.org/wiki/Multicast)
 - Connaissances du binaire, de l'hexadécimal et des conversions
@@ -27,7 +28,7 @@ Phase 2.0 - Test initial de transmission multicast
 2. Lire ce flux en appliquant l'url `rtp://239.86.0.X:5004`
 3. Capturer les paquets avec Wireshark
 4. Inspecter les adresses source et destination, MAC et IP. 
-4. Stopper VLC tout en laissant la capture de spatquets se poursuivre
+5. Stopper VLC tout en laissant la capture des paquets se poursuivre
     - *💡 Noter le comportement similaire à l'unicast*
 
 # Étape 3 - Un peu de théorie
