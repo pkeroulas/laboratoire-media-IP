@@ -10,24 +10,10 @@ et commun afin de permettre une communication claire, efficace et standardisée.
 
 Il toujours plus facile de travailler sur des fichiers du fait de leur caratère statique par rapport
 à des flux temps-réel. Inspectons les caractéristiques d'un échantillon typique trouvé sur internet
-pour évaluer les ordres de grandeur: [volume de données vs quantité de média stocké](./Phase3.0/README.md)
+pour évaluer les ordres de grandeur: [volume de données vs quantité de média stocké](./Phase3.0/README.md).
 
-[En construction]
+Puis [ajustons le débit tout observant l'impact sur la qualité](./Phase3.1/README.md).
 
-# Survol des problèmes vidéos possibles et des termes techniques assocçiés
+# Flux temps réel
 
-[En construction -> Demander des suggestions à P-H R.]
-
-# Test de transcodage d'un fichier avec VLC et FFmpeg
-
-[En construction]
-
-# Test de transcodage en temps réel avec flux vidéo réseau FFmpeg à FFmpeg
-
-[En construction]
-
-## Liens utiles
-- [Sunday's Thesis](https://escholarship.mcgill.ca/concern/theses/6w924g500)
-- [Luc's Thesis](https://espace.etsmtl.ca/id/eprint/1923/1/TRUDEAI_Luc_Th%C3%A8se.pdf)
-- [Advance Encoding Guide - Profile Section](https://silentaperture.gitlab.io/mdbook-guide/encoding/x264.html)
-- [VQEG](https://www.vqeg.org/video-datasets-and-organizations/)
+Comparons la [compression à débit variable vs débit constant](./Phase3.2/README.md).
