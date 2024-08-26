@@ -1,52 +1,45 @@
-# Phase 2.2 - Résolution de problème
+# Phase 2.2 - Analyse IGMP Snooping
+-----------------------------------
+
+![Topologie phase 2.1](./img/Phase_2_S2.1_topologie.png)
 
 # Prérequis
 
-- Un fichier vidéo en provenance du [Netflix Open Content](https://opencontent.netflix.com/)
-    - ex : *Meridian_UHD4k5994_HDR_P3PQ.mp4*
-- Trois ordinateurs avec VLC (Windows ou Linux)
-- Une connexion réseau entre les deux ordinateurs
-- Les adresses IP des trois ordinateurs
-- Le script mystère
-- Une adresse IP Multicast (déterminée par l'enseignant)
-- Connaissances de base sur le concept du [RTP](https://en.wikipedia.org/wiki/Real-time_Transport_Protocol)
-- Connaissances de base sur le concept du [Multicast](https://fr.wikipedia.org/wiki/Multicast)
-- Connaissances du binaire, de l'hexadécimal et des conversions
-- Connaissances de base sur l'[IGMP](https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst3850/software/release/37e/multicast/configuration_guide/b_mc_37e_3850_cg/b_mc_3e_3850_cg_chapter_0100.pdf)
+- Retrouver l'état du laboratoire tel qu'à la fin de l'[exercice 2.1](./Phase-2.1/README.md)
 
+# Étape 1 - Analyse des débits
 
-# Étape 1 - Configuration de la source
+1. Sur le commutateur (switch) utilisé dans votre réseau, aller observer le débit utilisé par le port de la source et le port du premier moniteur.
+    - ex: `watch show interface ethernet 4, ethernet 46`
+2. Sur le 2e moniteur, démarrer la lecture du flux vidéo.
+3. De retour sur le commutateur, prendre en note les débits des ports sources, moniteur 1, moniteur 2 ainsi qu'un autre port quelconque.
 
-1. Déterminer une adresse multicast pour la distribution d'un nouveau signal
-    - *💡 ex: `239.86.0.X` port `5004`*
-    - *💡 Voir avec l'instructeur pour la valeur X*
-2. Reconfigurer [VLC en mode transmetteur RTP](../Phase-1-Flux-pair-a-pair/Phase%201.0/README.md)
+*Comprendre l'avantage que permet le multicast. Le traffic média entrant ne dépend pas du nombre de
+demandeur.*
 
-# Étape 2 - Configuration du moniteur
+# Étape 2 - Analyse IGMP sur un Moniteur
 
-[IMPORTANT DE UTILISER FFMPEG COMME LECTEUR, VLC NE SWITCH PAS DE STREAM]s
-1. Poursuivre l'exercice précédent en configurant ffplay du PC moniteur.
-2. Lire ce flux en appliquant l'url `rtp://239.86.0.X:5004`
-3. Capturer les paquets avec Wireshark
-4. Inspecter les adresses source et destination, MAC et IP. 
-5. Stopper VLC tout en laissant la capture des paquets se poursuivre
-[AJOUTER ICI L'ANALYSE DU HEADER RTP] - TODO : Analyse d'un Header RTP.
+1. Lancer une capture wireshark sur un des moniteurs
+2. Stopper/redémarrer l'application média (vlc ou ffpmeg)
+3. Observer les paquets IGMP dans wireshark
+4. Noter la corrélation entre ces paquets et la précence de paquets multicast média
+5. Observer que des paquets IGMP sont aussi transmis à toutes les ~2 minutes
+    - *💡 Utiliser le champs filtre: `igmp`*
+6. Noter la source de ces requêtes
+7. En déduire également la nature synchro et asynchrone de ce protocole
 
+# Étape 3 - Analyse IGMP sur le commutateur
 
-# Étape 3 - Exécution du script mystère
-[Insérer ici l'exécution du script mystère (qui pourrait possiblement demander en input l'adresse ip multicast?)]
+Retournons sur le commutateur pour observer l'état du `querier`
 
-# Étape 4 - Diagnostique de la situation
-[Étapes et informations sur comment troubleshooter le problème (voir membres multicast sur la switch ? capture wireshark sur moniteur ? etc)]
+1. Sur le commutateur, afficher les membres des groupes multicast 
+    - `show ip igmp snooping groups`
+2. Sur le commutateur, afficher les statisques du protocole IGMP
+    - `show ip igmp snooping counters`
 
-# Étape 5 - La fonction SSM
+*Vous pouvez fermer le flux vidéo à ce point.*
 
-## Après le script rogue, insérer la fonction de SSM
-[SSM sur ffplay](https://trac.ffmpeg.org/ticket/7459) ressemble à ceci : 
-```powershell
-ffplay -i rtp://@239.89.0.1:5004?sources=10.179.11.101
-```
+# Liens utiles
 
-## Liens utiles
 [IGMP Querrier adresse tips](https://community.netgear.com/t5/Managed-Switches/igmp-querier-address/td-p/1335428)
 [IGMP Cisco](https://www.cisco.com/c/en/us/td/docs/routers/nfvis/switch_command/b-nfvis-switch-command-reference/igmp_snooping_commands.html#wp3565165330)
