@@ -25,8 +25,6 @@ Une fois les protocoles assimilés, les étudiants sont aménés à bâtir un mi
 de bout en bout: des sources _live_ (caméra) ou enregistrées (fichiers), une station de mixage et un
 serveur de distribution.
 
-TODO: insérer le serveur média dans le diagram.
-
 ![apercu](./img/laboratoire_media_sur_IP_phase5.png)
 *[Diagramme source](https://docs.google.com/drawings/d/1q6MF5KY4nLmCBxLiehqOJvOSK_qoAchkg8bCS-ulvEI/edit)*
 
